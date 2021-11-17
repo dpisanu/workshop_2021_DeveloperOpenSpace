@@ -1,0 +1,12 @@
+C:\src\DeveloperOpenSpace\src\Common\CommonControls\bin\Debug\net5.0-windows\CommonControls.deps.json
+C:\src\DeveloperOpenSpace\src\Common\CommonControls\bin\Debug\net5.0-windows\CommonControls.dll
+C:\src\DeveloperOpenSpace\src\Common\CommonControls\bin\Debug\net5.0-windows\ref\CommonControls.dll
+C:\src\DeveloperOpenSpace\src\Common\CommonControls\bin\Debug\net5.0-windows\CommonControls.pdb
+C:\src\DeveloperOpenSpace\src\Common\CommonControls\obj\Debug\net5.0-windows\CommonControls.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\DeveloperOpenSpace\src\Common\CommonControls\obj\Debug\net5.0-windows\CommonControls.AssemblyInfoInputs.cache
+C:\src\DeveloperOpenSpace\src\Common\CommonControls\obj\Debug\net5.0-windows\CommonControls.AssemblyInfo.cs
+C:\src\DeveloperOpenSpace\src\Common\CommonControls\obj\Debug\net5.0-windows\CommonControls.csproj.CoreCompileInputs.cache
+C:\src\DeveloperOpenSpace\src\Common\CommonControls\obj\Debug\net5.0-windows\CommonControls.dll
+C:\src\DeveloperOpenSpace\src\Common\CommonControls\obj\Debug\net5.0-windows\ref\CommonControls.dll
+C:\src\DeveloperOpenSpace\src\Common\CommonControls\obj\Debug\net5.0-windows\CommonControls.pdb
+C:\src\DeveloperOpenSpace\src\Common\CommonControls\obj\Debug\net5.0-windows\CommonControls.csproj.AssemblyReference.cache

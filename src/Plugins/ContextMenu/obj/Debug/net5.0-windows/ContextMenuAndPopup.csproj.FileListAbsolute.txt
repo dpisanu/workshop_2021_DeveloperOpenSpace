@@ -1,0 +1,17 @@
+C:\src\DeveloperOpenSpace\src\Plugins\ContextMenuAndPopup\obj\Debug\net5.0-windows\ContextMenuAndPopup.csproj.AssemblyReference.cache
+C:\src\DeveloperOpenSpace\src\Plugins\ContextMenuAndPopup\obj\Debug\net5.0-windows\ContextMenuAndPopup_MarkupCompile.cache
+C:\src\DeveloperOpenSpace\src\Plugins\ContextMenuAndPopup\bin\Debug\net5.0-windows\ContextMenuAndPopup.deps.json
+C:\src\DeveloperOpenSpace\src\Plugins\ContextMenuAndPopup\bin\Debug\net5.0-windows\ContextMenuAndPopup.dll
+C:\src\DeveloperOpenSpace\src\Plugins\ContextMenuAndPopup\bin\Debug\net5.0-windows\ref\ContextMenuAndPopup.dll
+C:\src\DeveloperOpenSpace\src\Plugins\ContextMenuAndPopup\bin\Debug\net5.0-windows\ContextMenuAndPopup.pdb
+C:\src\DeveloperOpenSpace\src\Plugins\ContextMenuAndPopup\obj\Debug\net5.0-windows\Control.g.cs
+C:\src\DeveloperOpenSpace\src\Plugins\ContextMenuAndPopup\obj\Debug\net5.0-windows\ContextMenuAndPopup_MarkupCompile.lref
+C:\src\DeveloperOpenSpace\src\Plugins\ContextMenuAndPopup\obj\Debug\net5.0-windows\Control.baml
+C:\src\DeveloperOpenSpace\src\Plugins\ContextMenuAndPopup\obj\Debug\net5.0-windows\ContextMenuAndPopup.g.resources
+C:\src\DeveloperOpenSpace\src\Plugins\ContextMenuAndPopup\obj\Debug\net5.0-windows\ContextMenuAndPopup.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\DeveloperOpenSpace\src\Plugins\ContextMenuAndPopup\obj\Debug\net5.0-windows\ContextMenuAndPopup.AssemblyInfoInputs.cache
+C:\src\DeveloperOpenSpace\src\Plugins\ContextMenuAndPopup\obj\Debug\net5.0-windows\ContextMenuAndPopup.AssemblyInfo.cs
+C:\src\DeveloperOpenSpace\src\Plugins\ContextMenuAndPopup\obj\Debug\net5.0-windows\ContextMenuAndPopup.csproj.CoreCompileInputs.cache
+C:\src\DeveloperOpenSpace\src\Plugins\ContextMenuAndPopup\obj\Debug\net5.0-windows\ContextMenuAndPopup.dll
+C:\src\DeveloperOpenSpace\src\Plugins\ContextMenuAndPopup\obj\Debug\net5.0-windows\ref\ContextMenuAndPopup.dll
+C:\src\DeveloperOpenSpace\src\Plugins\ContextMenuAndPopup\obj\Debug\net5.0-windows\ContextMenuAndPopup.pdb

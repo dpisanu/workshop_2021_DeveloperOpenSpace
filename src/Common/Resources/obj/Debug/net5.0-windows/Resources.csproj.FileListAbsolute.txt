@@ -1,0 +1,12 @@
+C:\src\DeveloperOpenSpace\src\Common\Resources\bin\Debug\net5.0-windows\Resources.deps.json
+C:\src\DeveloperOpenSpace\src\Common\Resources\bin\Debug\net5.0-windows\Resources.dll
+C:\src\DeveloperOpenSpace\src\Common\Resources\bin\Debug\net5.0-windows\ref\Resources.dll
+C:\src\DeveloperOpenSpace\src\Common\Resources\bin\Debug\net5.0-windows\Resources.pdb
+C:\src\DeveloperOpenSpace\src\Common\Resources\obj\Debug\net5.0-windows\Resources.csproj.AssemblyReference.cache
+C:\src\DeveloperOpenSpace\src\Common\Resources\obj\Debug\net5.0-windows\Resources.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\DeveloperOpenSpace\src\Common\Resources\obj\Debug\net5.0-windows\Resources.AssemblyInfoInputs.cache
+C:\src\DeveloperOpenSpace\src\Common\Resources\obj\Debug\net5.0-windows\Resources.AssemblyInfo.cs
+C:\src\DeveloperOpenSpace\src\Common\Resources\obj\Debug\net5.0-windows\Resources.csproj.CoreCompileInputs.cache
+C:\src\DeveloperOpenSpace\src\Common\Resources\obj\Debug\net5.0-windows\Resources.dll
+C:\src\DeveloperOpenSpace\src\Common\Resources\obj\Debug\net5.0-windows\ref\Resources.dll
+C:\src\DeveloperOpenSpace\src\Common\Resources\obj\Debug\net5.0-windows\Resources.pdb

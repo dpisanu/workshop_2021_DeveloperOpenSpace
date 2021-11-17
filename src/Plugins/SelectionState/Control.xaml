@@ -1,0 +1,93 @@
+﻿<UserControl x:Class="SelectionState.Control"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SelectionState"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <!-- Grid Columns -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <!-- Grid Rows -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label Name="Label" 
+               AutomationProperties.AutomationId="LabelID" 
+               Grid.Row="0"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center" 
+               Content="This is a state Label"/>
+
+        <Button Name="Button" 
+                AutomationProperties.AutomationId="ButtonID" 
+                Grid.Row="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" 
+                MinWidth="70" 
+                Padding="5" 
+                Margin="5" 
+                Content="Button" 
+                Click="OnClick"/>
+
+        <CheckBox Name="CheckBox" 
+                  AutomationProperties.AutomationId="CheckBoxID" 
+                  Grid.Row="2"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center" 
+                  MinWidth="70" 
+                  Padding="5" 
+                  Margin="5" 
+                  Content="Check Box" 
+                  Click="OnClick"/>
+
+        <StackPanel Grid.Column="0"
+                    Grid.Row="3"
+                    Margin="0"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Stretch">
+            <RadioButton Name="ToggleButtonA"
+                         AutomationProperties.AutomationId="ToggleButtonAID" 
+                         Content="Toggle Button A"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center" 
+                         Click="OnClick"/>
+            <RadioButton Name="ToggleButtonB"
+                         AutomationProperties.AutomationId="ToggleButtonBID" 
+                         Content="Toggle Button B"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center" 
+                         Click="OnClick"/>
+            <RadioButton Name="ToggleButtonC"
+                         AutomationProperties.AutomationId="ToggleButtonCID" 
+                         Content="Toggle Button C"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center" 
+                         Click="OnClick"/>
+        </StackPanel>
+
+        <TextBlock HorizontalAlignment="Left" 
+                   Margin="5" 
+                   DockPanel.Dock="Top"
+                   Grid.Row="4"
+                   VerticalAlignment="Center">
+                <Hyperlink Name="Hyperlink"
+                           TextDecorations="None" 
+                           AutomationProperties.AutomationId="HyperlinkID" 
+                           Click="OnClick">
+                    <TextBlock Text="This is a Hyperlink" 
+                               Margin="2,-7,0,0" 
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                </Hyperlink>
+            </TextBlock>
+    </Grid>
+</UserControl>

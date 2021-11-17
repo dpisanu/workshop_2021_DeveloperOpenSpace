@@ -1,0 +1,16 @@
+C:\src\DeveloperOpenSpace\src\Plugins\SelectionState\bin\Debug\net5.0-windows\SelectionState.deps.json
+C:\src\DeveloperOpenSpace\src\Plugins\SelectionState\bin\Debug\net5.0-windows\SelectionState.dll
+C:\src\DeveloperOpenSpace\src\Plugins\SelectionState\bin\Debug\net5.0-windows\ref\SelectionState.dll
+C:\src\DeveloperOpenSpace\src\Plugins\SelectionState\bin\Debug\net5.0-windows\SelectionState.pdb
+C:\src\DeveloperOpenSpace\src\Plugins\SelectionState\obj\Debug\net5.0-windows\Control.g.cs
+C:\src\DeveloperOpenSpace\src\Plugins\SelectionState\obj\Debug\net5.0-windows\SelectionState_MarkupCompile.cache
+C:\src\DeveloperOpenSpace\src\Plugins\SelectionState\obj\Debug\net5.0-windows\SelectionState_MarkupCompile.lref
+C:\src\DeveloperOpenSpace\src\Plugins\SelectionState\obj\Debug\net5.0-windows\Control.baml
+C:\src\DeveloperOpenSpace\src\Plugins\SelectionState\obj\Debug\net5.0-windows\SelectionState.g.resources
+C:\src\DeveloperOpenSpace\src\Plugins\SelectionState\obj\Debug\net5.0-windows\SelectionState.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\DeveloperOpenSpace\src\Plugins\SelectionState\obj\Debug\net5.0-windows\SelectionState.AssemblyInfoInputs.cache
+C:\src\DeveloperOpenSpace\src\Plugins\SelectionState\obj\Debug\net5.0-windows\SelectionState.AssemblyInfo.cs
+C:\src\DeveloperOpenSpace\src\Plugins\SelectionState\obj\Debug\net5.0-windows\SelectionState.csproj.CoreCompileInputs.cache
+C:\src\DeveloperOpenSpace\src\Plugins\SelectionState\obj\Debug\net5.0-windows\SelectionState.dll
+C:\src\DeveloperOpenSpace\src\Plugins\SelectionState\obj\Debug\net5.0-windows\ref\SelectionState.dll
+C:\src\DeveloperOpenSpace\src\Plugins\SelectionState\obj\Debug\net5.0-windows\SelectionState.pdb

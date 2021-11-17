@@ -1,0 +1,4 @@
+C:\src\DeveloperOpenSpace\src\Plugins\ListBox\obj\Debug\net5.0-windows\Control.g.cs
+C:\src\DeveloperOpenSpace\src\Plugins\ListBox\obj\Debug\net5.0-windows\ListBox_MarkupCompile.cache
+C:\src\DeveloperOpenSpace\src\Plugins\ListBox\obj\Debug\net5.0-windows\ListBox_MarkupCompile.lref
+C:\src\DeveloperOpenSpace\src\Plugins\ListBox\obj\Debug\net5.0-windows\ListBox.csproj.AssemblyReference.cache

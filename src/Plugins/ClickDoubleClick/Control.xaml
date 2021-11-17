@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="ClickDoubleClick.Control"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <!-- Grid Columns -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <!-- Grid Rows -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0"
+                    Grid.Row="0"
+                    Margin="0"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Stretch">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <!-- Colour Rectangles -->
+                <StackPanel Grid.Row="0"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <Rectangle Name="Rectangle01" AutomationProperties.AutomationId="Rectangle01ID" MinWidth="35" MinHeight="35" Margin="1" Fill="White" Stroke="Black" />
+                    <Rectangle Name="Rectangle02" AutomationProperties.AutomationId="Rectangle02ID" MinWidth="35" MinHeight="35" Margin="1" Fill="White" Stroke="Black" />
+                    <Rectangle Name="Rectangle03" AutomationProperties.AutomationId="Rectangle03ID" MinWidth="35" MinHeight="35" Margin="1" Fill="White" Stroke="Black" />
+                    <Rectangle Name="Rectangle04" AutomationProperties.AutomationId="Rectangle04ID" MinWidth="35" MinHeight="35" Margin="1" Fill="White" Stroke="Black" />
+                </StackPanel>
+                <!-- Images -->
+                <StackPanel Grid.Row="1"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <Image Name="Image01" AutomationProperties.AutomationId="ImageAButton01ID" MinWidth="35" MaxWidth="35" MinHeight="35" MaxHeight="35" Visibility="Hidden" VerticalAlignment="Top" Source="/DemoUI;component/Images/click.hand.jpg" />
+                    <Image Name="Image02" AutomationProperties.AutomationId="ImageBButton01ID" MinWidth="35" MaxWidth="35" MinHeight="35" MaxHeight="35" Visibility="Hidden" VerticalAlignment="Top" Source="/DemoUI;component/Images/click.hand.jpg" />
+                    <Image Name="Image03" AutomationProperties.AutomationId="ImageAButton02ID" MinWidth="35" MaxWidth="35" MinHeight="35" MaxHeight="35" Visibility="Hidden" VerticalAlignment="Top" Source="/DemoUI;component/Images/click.hand.jpg" />
+                    <Image Name="Image04" AutomationProperties.AutomationId="ImageBButton02ID" MinWidth="35" MaxWidth="35" MinHeight="35" MaxHeight="35" Visibility="Hidden" VerticalAlignment="Top" Source="/DemoUI;component/Images/click.hand.jpg" />
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2"
+                    Grid.Row="2"
+                    Margin="0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Button Name="Button01" AutomationProperties.AutomationId="Button01ID" MinWidth="70" Padding="5" Margin="5" Content="Button 01" MouseDoubleClick="Button01MouseDoubleClick" Click="Button01Click" />
+            <Button Name="Button02" AutomationProperties.AutomationId="Button02ID" MinWidth="70" Padding="5" Margin="5" Content="Button 02" MouseDoubleClick="Button02MouseDoubleClick" Click="Button02Click" />
+        </StackPanel>
+    </Grid>
+</UserControl>

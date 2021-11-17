@@ -1,0 +1,4 @@
+C:\src\DeveloperOpenSpace\src\Plugins\DropDown\obj\Debug\net5.0-windows\DropDown.csproj.AssemblyReference.cache
+C:\src\DeveloperOpenSpace\src\Plugins\DropDown\obj\Debug\net5.0-windows\Control.g.cs
+C:\src\DeveloperOpenSpace\src\Plugins\DropDown\obj\Debug\net5.0-windows\DropDown_MarkupCompile.cache
+C:\src\DeveloperOpenSpace\src\Plugins\DropDown\obj\Debug\net5.0-windows\DropDown_MarkupCompile.lref

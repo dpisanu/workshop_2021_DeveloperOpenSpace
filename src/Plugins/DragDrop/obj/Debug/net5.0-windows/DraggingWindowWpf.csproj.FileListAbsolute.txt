@@ -1,0 +1,12 @@
+C:\src\DeveloperOpenSpace\src\Plugins\DraggingWindowWpf\bin\Debug\net5.0-windows\DraggingWindowWpf.deps.json
+C:\src\DeveloperOpenSpace\src\Plugins\DraggingWindowWpf\bin\Debug\net5.0-windows\DraggingWindowWpf.dll
+C:\src\DeveloperOpenSpace\src\Plugins\DraggingWindowWpf\bin\Debug\net5.0-windows\ref\DraggingWindowWpf.dll
+C:\src\DeveloperOpenSpace\src\Plugins\DraggingWindowWpf\bin\Debug\net5.0-windows\DraggingWindowWpf.pdb
+C:\src\DeveloperOpenSpace\src\Plugins\DraggingWindowWpf\obj\Debug\net5.0-windows\DraggingWindowWpf.csproj.AssemblyReference.cache
+C:\src\DeveloperOpenSpace\src\Plugins\DraggingWindowWpf\obj\Debug\net5.0-windows\DraggingWindowWpf.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\DeveloperOpenSpace\src\Plugins\DraggingWindowWpf\obj\Debug\net5.0-windows\DraggingWindowWpf.AssemblyInfoInputs.cache
+C:\src\DeveloperOpenSpace\src\Plugins\DraggingWindowWpf\obj\Debug\net5.0-windows\DraggingWindowWpf.AssemblyInfo.cs
+C:\src\DeveloperOpenSpace\src\Plugins\DraggingWindowWpf\obj\Debug\net5.0-windows\DraggingWindowWpf.csproj.CoreCompileInputs.cache
+C:\src\DeveloperOpenSpace\src\Plugins\DraggingWindowWpf\obj\Debug\net5.0-windows\DraggingWindowWpf.dll
+C:\src\DeveloperOpenSpace\src\Plugins\DraggingWindowWpf\obj\Debug\net5.0-windows\ref\DraggingWindowWpf.dll
+C:\src\DeveloperOpenSpace\src\Plugins\DraggingWindowWpf\obj\Debug\net5.0-windows\DraggingWindowWpf.pdb

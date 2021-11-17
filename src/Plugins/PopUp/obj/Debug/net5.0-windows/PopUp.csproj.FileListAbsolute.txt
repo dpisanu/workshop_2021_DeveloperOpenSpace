@@ -1,0 +1,17 @@
+C:\src\DeveloperOpenSpace\src\Plugins\PopUp\bin\Debug\net5.0-windows\PopUp.deps.json
+C:\src\DeveloperOpenSpace\src\Plugins\PopUp\bin\Debug\net5.0-windows\PopUp.dll
+C:\src\DeveloperOpenSpace\src\Plugins\PopUp\bin\Debug\net5.0-windows\ref\PopUp.dll
+C:\src\DeveloperOpenSpace\src\Plugins\PopUp\bin\Debug\net5.0-windows\PopUp.pdb
+C:\src\DeveloperOpenSpace\src\Plugins\PopUp\obj\Debug\net5.0-windows\PopUp.csproj.AssemblyReference.cache
+C:\src\DeveloperOpenSpace\src\Plugins\PopUp\obj\Debug\net5.0-windows\Control.g.cs
+C:\src\DeveloperOpenSpace\src\Plugins\PopUp\obj\Debug\net5.0-windows\PopUp_MarkupCompile.cache
+C:\src\DeveloperOpenSpace\src\Plugins\PopUp\obj\Debug\net5.0-windows\PopUp_MarkupCompile.lref
+C:\src\DeveloperOpenSpace\src\Plugins\PopUp\obj\Debug\net5.0-windows\Control.baml
+C:\src\DeveloperOpenSpace\src\Plugins\PopUp\obj\Debug\net5.0-windows\PopUp.g.resources
+C:\src\DeveloperOpenSpace\src\Plugins\PopUp\obj\Debug\net5.0-windows\PopUp.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\DeveloperOpenSpace\src\Plugins\PopUp\obj\Debug\net5.0-windows\PopUp.AssemblyInfoInputs.cache
+C:\src\DeveloperOpenSpace\src\Plugins\PopUp\obj\Debug\net5.0-windows\PopUp.AssemblyInfo.cs
+C:\src\DeveloperOpenSpace\src\Plugins\PopUp\obj\Debug\net5.0-windows\PopUp.csproj.CoreCompileInputs.cache
+C:\src\DeveloperOpenSpace\src\Plugins\PopUp\obj\Debug\net5.0-windows\PopUp.dll
+C:\src\DeveloperOpenSpace\src\Plugins\PopUp\obj\Debug\net5.0-windows\ref\PopUp.dll
+C:\src\DeveloperOpenSpace\src\Plugins\PopUp\obj\Debug\net5.0-windows\PopUp.pdb

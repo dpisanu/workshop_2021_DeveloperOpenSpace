@@ -8,7 +8,7 @@ using CommonFramework.Commands;
 
 namespace ContextMenu
 {
-    public class ContextMenu : BaseViewModels
+    public class ControlViewModel : BaseViewModels
     {
         private ImageSource _currentImage;
 
@@ -18,13 +18,12 @@ namespace ContextMenu
 
         private bool _imageVisibility = false;
 
-        public ContextMenu()
+        public ControlViewModel()
         {
             _okImage = new BitmapImage(new Uri("Creek.jpg", UriKind.Relative));
             _noImage = new BitmapImage(new Uri("Creek.jpg", UriKind.Relative));
             _cancelImage = new BitmapImage(new Uri("Creek.jpg", UriKind.Relative));
 
-            PopUpCommand = new RelayCommand(PopUpCommandExecute);
             ContextMenuOkCommand = new RelayCommand(ContextMenuOkCommandExecute);
             ContextMenuNoCommand = new RelayCommand(ContextMenuNoCommandExecute);
             ContextMenuCancelCommand = new RelayCommand(ContextMenuCancelCommandExecute);
@@ -42,31 +41,10 @@ namespace ContextMenu
             set => OnPropertChanged(ref _currentImage, value);
         }
 
-        public ICommand PopUpCommand { get; set; }
         public ICommand ContextMenuOkCommand { get; set; }
         public ICommand ContextMenuNoCommand { get; set; }
         public ICommand ContextMenuCancelCommand { get; set; }
 
-        private void PopUpCommandExecute(object parameter)
-        {
-            ImageVisibility = false;
-
-            var result = MessageBox.Show("This is a message box", "Message Box", MessageBoxButton.YesNoCancel);
-            if (result == MessageBoxResult.Yes)
-            {
-                ImageSource = _okImage;
-            }
-            if (result == MessageBoxResult.No)
-            {
-                ImageSource = _noImage;
-            }
-            if (result == MessageBoxResult.Cancel)
-            {
-                ImageSource = _cancelImage;
-            }
-
-            ImageVisibility = true;
-        }
 
         private void ContextMenuOkCommandExecute(object parameter)
         {

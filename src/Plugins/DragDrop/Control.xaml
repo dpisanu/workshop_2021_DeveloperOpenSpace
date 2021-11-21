@@ -16,9 +16,9 @@
                 Width="150" 
                 Padding="5" 
                 Content="Dragging WPF Button" 
-                MouseLeftButtonUp="DraggingButtonWPF_OnMouseLeftButtonUp"
-                MouseMove="DraggingButtonWPF_OnMouseMove"
-                MouseUp="DraggingButtonWPF_OnMouseUp"
+                MouseLeftButtonUp="OnMouseLeftButtonUp"
+                MouseMove="OnMouseMove"
+                MouseUp="OnMouseUp"
                 />
         </Canvas>
     </Grid>

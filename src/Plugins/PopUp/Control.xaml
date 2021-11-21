@@ -27,11 +27,13 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-
-            <Image Name="ImageCancel" AutomationProperties.AutomationId="ImageCancelID" MinWidth="60" MaxWidth="60" MinHeight="60" MaxHeight="60" Visibility="Visible" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/Common.Resources;component/Images/cancel.jpg" />
-            <Image Name="ImageOk" AutomationProperties.AutomationId="ImageOkID" MinWidth="60" MaxWidth="60" MinHeight="60" MaxHeight="60" Visibility="Visible" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/Common.Resources;component/Images/ok.jpg" />
-            <Image Name="ImageNo" AutomationProperties.AutomationId="ImageNoID" MinWidth="60" MaxWidth="60" MinHeight="60" MaxHeight="60" Visibility="Visible" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/Common.Resources;component/Images/no.jpg" />
-
+            
+            <Image Name="ReactionImage" 
+                   AutomationProperties.AutomationId="ImageCancelID" 
+                   MinWidth="60" MaxWidth="60" MinHeight="60" MaxHeight="60" 
+                   Visibility="{Binding ImageVisibility}"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Source="{Binding ImageSource}" />
         </Grid>
 
         <!-- Context Menu and Message Box Buttons -->
@@ -48,16 +50,9 @@
                     MinWidth="70" 
                     Padding="5" 
                     Margin="5" 
-                    Content="Right Click Me for Context Menu or Click for Pop Up" 
-                    Click="ButtonClick">
-                <Button.ContextMenu>
-                    <ContextMenu IsVisibleChanged="OnIsVisibleChanged">
-                        <MenuItem Name="MenuItemOk" Header="Ok" Click="MenuItemOk_OnClick"></MenuItem>
-                        <MenuItem Name="MenuItemNo" Header="No" Click="MenuItemNo_OnClick"></MenuItem>
-                        <MenuItem Name="MenuItemCancel" Header="Cancel" Click="MenuItemCancel_OnClick"></MenuItem>
-                    </ContextMenu>
-                </Button.ContextMenu>
-            </Button>
+                    Content="Click for Pop Up" 
+                    Command="{Binding PopUpCommand}"/>
+
         </StackPanel>
     </Grid>
 </UserControl>

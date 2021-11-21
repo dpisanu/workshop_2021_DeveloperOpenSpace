@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DragDrop
 {
@@ -26,18 +15,19 @@ namespace DragDrop
         public Control()
         {
             InitializeComponent();
-            Button.PreviewMouseUp += this.DraggingButtonWPF_OnMouseUp;
-            Button.PreviewMouseLeftButtonDown += this.DraggingButtonWPF_OnMouseLeftButtonUp;
-            Button.PreviewMouseMove += this.DraggingButtonWPF_OnMouseMove;
+            Button.PreviewMouseUp += OnMouseUp;
+            Button.PreviewMouseLeftButtonDown += OnMouseLeftButtonUp;
+            Button.PreviewMouseMove += OnMouseMove;
         }
 
-        private void DraggingWindowWpfNameClosing(object sender, System.ComponentModel.CancelEventArgs e)
+        // TODO : implement a dispose or hook into the window close event to deregister the Button events
+        private void UnregisterEvents()
         {
             try
             {
-                Button.PreviewMouseUp -= this.DraggingButtonWPF_OnMouseUp;
-                Button.PreviewMouseLeftButtonDown -= this.DraggingButtonWPF_OnMouseLeftButtonUp;
-                Button.PreviewMouseMove -= this.DraggingButtonWPF_OnMouseMove;
+                Button.PreviewMouseUp -= OnMouseUp;
+                Button.PreviewMouseLeftButtonDown -= OnMouseLeftButtonUp;
+                Button.PreviewMouseMove -= OnMouseMove;
             }
             catch (Exception)
             {
@@ -45,54 +35,54 @@ namespace DragDrop
             }
         }
 
-        private void DraggingButtonWPF_OnMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        private void OnMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             // Get the Position of Window so that it will set margin from this window
-            this._mouseX = e.GetPosition(this).X;
-            this._mouseY = e.GetPosition(this).Y;
+            _mouseX = e.GetPosition(this).X;
+            _mouseY = e.GetPosition(this).Y;
         }
 
-        private void DraggingButtonWPF_OnMouseMove(object sender, MouseEventArgs e)
+        private void OnMouseMove(object sender, MouseEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {
                 // Capture the mouse for border
-                e.MouseDevice.Capture(Button);
+                _ = e.MouseDevice.Capture(Button);
                 var tempX = Convert.ToInt32(e.GetPosition(this).X);
                 var tempY = Convert.ToInt32(e.GetPosition(this).Y);
-                var margin = this.MainGrid.Margin;
+                var margin = MainGrid.Margin;
                 // when While moving _tempX get greater than m_MouseX relative to usercontrol 
-                if (this._mouseX > tempX)
+                if (_mouseX > tempX)
                 {
                     // add the difference of both to Left
-                    margin.Left += tempX - this._mouseX;
+                    margin.Left += tempX - _mouseX;
                     // subtract the difference of both to Left
-                    margin.Right -= tempX - this._mouseX;
+                    margin.Right -= tempX - _mouseX;
                 }
                 else
                 {
-                    margin.Left -= this._mouseX - tempX;
-                    margin.Right -= tempX - this._mouseX;
+                    margin.Left -= _mouseX - tempX;
+                    margin.Right -= tempX - _mouseX;
                 }
                 if (this._mouseY > tempY)
                 {
-                    margin.Top += tempY - this._mouseY;
-                    margin.Bottom -= tempY - this._mouseY;
+                    margin.Top += tempY - _mouseY;
+                    margin.Bottom -= tempY - _mouseY;
                 }
                 else
                 {
-                    margin.Top -= this._mouseY - tempY;
-                    margin.Bottom -= tempY - this._mouseY;
+                    margin.Top -= _mouseY - tempY;
+                    margin.Bottom -= tempY - _mouseY;
                 }
                 MainGrid.Margin = margin;
-                this._mouseX = tempX;
-                this._mouseY = tempY;
+                _mouseX = tempX;
+                _mouseY = tempY;
             }
         }
 
-        private void DraggingButtonWPF_OnMouseUp(object sender, MouseButtonEventArgs e)
+        private void OnMouseUp(object sender, MouseButtonEventArgs e)
         {
-            e.MouseDevice.Capture(null);
+            _ = e.MouseDevice.Capture(null);
         }
     }
 }

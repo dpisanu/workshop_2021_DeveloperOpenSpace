@@ -50,8 +50,7 @@
                     MinWidth="70" 
                     Padding="5" 
                     Margin="5" 
-                    Content="Right Click Me for Context Menu or Click for Pop Up" 
-                    Command="{Binding PopUpCommand}">
+                    Content="Right Click Me for Context Menu">
                 <Button.ContextMenu>
                     <ContextMenu IsVisibleChanged="OnIsVisibleChanged">
                         <MenuItem Name="MenuItemOk" Header="Ok" Command="{Binding ContextMenuOkCommand}"/>

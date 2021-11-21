@@ -25,7 +25,7 @@
                Grid.Row="0"
                HorizontalAlignment="Center"
                VerticalAlignment="Center" 
-               Content="This is a state Label"/>
+               Content="{Binding LabelContent}"/>
 
         <Button Name="Button" 
                 AutomationProperties.AutomationId="ButtonID" 
@@ -36,7 +36,8 @@
                 Padding="5" 
                 Margin="5" 
                 Content="Button" 
-                Click="OnClick"/>
+                Command="{Binding SuperbCommand}"
+                CommandParameter="{Binding Name, RelativeSource={RelativeSource Self}, Mode=OneWay}"/>
 
         <CheckBox Name="CheckBox" 
                   AutomationProperties.AutomationId="CheckBoxID" 
@@ -47,7 +48,8 @@
                   Padding="5" 
                   Margin="5" 
                   Content="Check Box" 
-                  Click="OnClick"/>
+                  Command="{Binding SuperbCommand}"
+                  CommandParameter="{Binding Name, RelativeSource={RelativeSource Self}, Mode=OneWay}"/>
 
         <StackPanel Grid.Column="0"
                     Grid.Row="3"
@@ -59,19 +61,22 @@
                          Content="Toggle Button A"
                          HorizontalAlignment="Center"
                          VerticalAlignment="Center" 
-                         Click="OnClick"/>
+                         Command="{Binding SuperbCommand}"
+                         CommandParameter="{Binding Name, RelativeSource={RelativeSource Self}, Mode=OneWay}"/>
             <RadioButton Name="ToggleButtonB"
                          AutomationProperties.AutomationId="ToggleButtonBID" 
                          Content="Toggle Button B"
                          HorizontalAlignment="Center"
                          VerticalAlignment="Center" 
-                         Click="OnClick"/>
+                         Command="{Binding SuperbCommand}"
+                         CommandParameter="{Binding Name, RelativeSource={RelativeSource Self}, Mode=OneWay}"/>
             <RadioButton Name="ToggleButtonC"
                          AutomationProperties.AutomationId="ToggleButtonCID" 
                          Content="Toggle Button C"
                          HorizontalAlignment="Center"
                          VerticalAlignment="Center" 
-                         Click="OnClick"/>
+                         Command="{Binding SuperbCommand}"
+                         CommandParameter="{Binding Name, RelativeSource={RelativeSource Self}, Mode=OneWay}"/>
         </StackPanel>
 
         <TextBlock HorizontalAlignment="Left" 
@@ -82,7 +87,8 @@
                 <Hyperlink Name="Hyperlink"
                            TextDecorations="None" 
                            AutomationProperties.AutomationId="HyperlinkID" 
-                           Click="OnClick">
+                           Command="{Binding SuperbCommand}"
+                           CommandParameter="{Binding Name, RelativeSource={RelativeSource Self}, Mode=OneWay}">
                     <TextBlock Text="This is a Hyperlink" 
                                Margin="2,-7,0,0" 
                                HorizontalAlignment="Center"

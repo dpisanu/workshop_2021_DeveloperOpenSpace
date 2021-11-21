@@ -2,7 +2,7 @@ using System;
 
 namespace Splitter
 {
-    public class Registration
+    public class Registration :
     {
     }
 }

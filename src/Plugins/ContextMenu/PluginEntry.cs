@@ -8,7 +8,7 @@ namespace ContextMenu
     {
         private readonly IViewModel _dataContext;
         private readonly UserControl _userControl;
-        private readonly IWindow _pluginwindow;
+        private readonly IModalWindow _pluginwindow;
 
         public PluginEntry()
         {

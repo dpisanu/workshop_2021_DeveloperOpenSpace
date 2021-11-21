@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using MahApps.Metro.SimpleChildWindow;
 
 namespace CommonControls.Views
 {
     /// <summary>
     /// Interaction logic for CustomControlWindowsHost.xaml
     /// </summary>
-    public partial class CustomControlWindowsHost : Window, IWindow
+    public partial class CustomControlWindowsHost : ChildWindow, IModalWindow
     {
         public CustomControlWindowsHost(UserControl guestControl)
         {
@@ -17,6 +18,11 @@ namespace CommonControls.Views
             }
             InitializeComponent();
             LayoutRoot.Children.Add(guestControl);
+        }
+
+        public void Show()
+        {
+            this.SetCurrentValue(ChildWindow.IsOpenProperty, true);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using CommonControls.ViewModels;
 
 namespace SelectionState
 {
@@ -7,8 +8,9 @@ namespace SelectionState
     /// </summary>
     public partial class Control : UserControl
     {
-        public Control()
+        public Control(IViewModel viewModel)// : base(viewModel)
         {
+            DataContext = viewModel;
             InitializeComponent();
         }
     }

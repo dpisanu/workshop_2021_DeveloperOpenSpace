@@ -5,4 +5,9 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\CommonControls\CommonControls.csproj" />
+    <ProjectReference Include="..\..\Common\Plugin\Plugin.csproj" />
+  </ItemGroup>
+
 </Project>

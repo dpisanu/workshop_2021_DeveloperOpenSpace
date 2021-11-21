@@ -8,6 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Common\CommonControls\CommonControls.csproj" />
     <ProjectReference Include="..\..\Common\CommonFramework\CommonFramework.csproj" />
+    <ProjectReference Include="..\..\Common\Plugin\Plugin.csproj" />
   </ItemGroup>
 
 </Project>

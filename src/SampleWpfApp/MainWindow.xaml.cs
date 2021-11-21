@@ -19,7 +19,7 @@ namespace SampleWpfApp
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : IWindow
+    public partial class MainWindow : IMainWindow
     {
         public MainWindow()
         {

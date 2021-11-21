@@ -31,8 +31,7 @@
                      Padding="0"
                      Name="ListBox"
                      AutomationProperties.AutomationId="ListBoxID"
-                     ItemsSource="{Binding ObservableCollectionName, IsAsync=True}" 
-                     SelectedItem="{Binding SelectedItem, Mode=TwoWay}" />
+                     ItemsSource="{Binding ComboBoxContent, IsAsync=True}" />
         </StackPanel>
 
         <StackPanel Grid.Column="0"
@@ -44,24 +43,14 @@
             <TextBox Name="TextBox" 
                      AutomationProperties.AutomationId="TextBoxID" 
                      MinWidth="70" 
-                     Text="{Binding TextBoxName, Mode=TwoWay}"/>
-            <ComboBox Name="ComboBox" 
-                      AutomationProperties.AutomationId="ComboBoxID" 
-                      HorizontalAlignment="Stretch" 
-                      VerticalAlignment="Stretch" 
-                      MinWidth="70" 
-                      Padding="0" 
-                      Margin="5" 
-                      ItemsSource="{Binding ComboBoxContent, Mode=OneWay}" 
-                      SelectionChanged="ComboBoxOnSelectionChanged" />
+                     Text="{Binding TextBoxValue, Mode=TwoWay}"/>            
             <Button Name="Button" 
                     AutomationProperties.AutomationId="ButtonID" 
                     MinWidth="70" 
                     Padding="5" 
                     Margin="5" 
-                    Content="Add Name" 
-                    Click="ButtonClick" />
-
+                    Content="Add" 
+                    Command="{Binding AddCommand}" />
         </StackPanel>
     </Grid>
 </UserControl>

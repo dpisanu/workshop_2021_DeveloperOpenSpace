@@ -1,4 +1,4 @@
-﻿namespace CommonControls.Common
+﻿namespace CommonControls.Views
 {
     public interface IView
     {

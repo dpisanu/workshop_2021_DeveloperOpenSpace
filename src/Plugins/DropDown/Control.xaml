@@ -7,33 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <!-- Grid Columns -->
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <!-- Grid Rows -->
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
         <StackPanel Grid.Column="0"
                     Grid.Row="0"
                     Margin="0"
                     Orientation="Vertical"
-                    HorizontalAlignment="Stretch">
-            <ListBox HorizontalAlignment="Stretch"
-                     VerticalContentAlignment="Stretch"
-                     Margin="10" 
-                     VerticalAlignment="Top" 
-                     MaxHeight="100"
-                     MinHeight="100"
-                     Padding="0"
-                     Name="ListBox"
-                     AutomationProperties.AutomationId="ListBoxID"
-                     ItemsSource="{Binding ObservableCollectionName, IsAsync=True}" 
-                     SelectedItem="{Binding SelectedItem, Mode=TwoWay}" />
-        </StackPanel>
+                    HorizontalAlignment="Stretch"/>
 
         <StackPanel Grid.Column="0"
                     Grid.Row="1"
@@ -44,23 +22,16 @@
             <TextBox Name="TextBox" 
                      AutomationProperties.AutomationId="TextBoxID" 
                      MinWidth="70" 
-                     Text="{Binding TextBoxName, Mode=TwoWay}"/>
+                     Text="{Binding TextBoxValue, Mode=TwoWay}"/>
             <ComboBox Name="ComboBox" 
                       AutomationProperties.AutomationId="ComboBoxID" 
                       HorizontalAlignment="Stretch" 
                       VerticalAlignment="Stretch" 
                       MinWidth="70" 
                       Padding="0" 
-                      Margin="5" 
+                      Margin="5"
                       ItemsSource="{Binding ComboBoxContent, Mode=OneWay}" 
-                      SelectionChanged="ComboBoxOnSelectionChanged" />
-            <Button Name="Button" 
-                    AutomationProperties.AutomationId="ButtonID" 
-                    MinWidth="70" 
-                    Padding="5" 
-                    Margin="5" 
-                    Content="Add Name" 
-                    Click="ButtonClick" />
+                      SelectedItem="{Binding SelectedItem, Mode=TwoWay}"/>
 
         </StackPanel>
     </Grid>

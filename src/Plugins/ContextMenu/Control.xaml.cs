@@ -11,33 +11,7 @@ namespace ContextMenu
         public Control()
         {
             InitializeComponent();
-            ImageOk.Visibility = Visibility.Hidden;
-            ImageNo.Visibility = Visibility.Hidden;
             ImageCancel.Visibility = Visibility.Hidden;
-        }
-
-        /// <summary>
-        /// The button click.
-        /// </summary>
-        /// <param name="sender">  The sender.  </param>
-        /// <param name="e">  The e.  </param>
-        private void ButtonClick(object sender, RoutedEventArgs e)
-        {
-            ImageOk.Visibility = ImageNo.Visibility = ImageCancel.Visibility = Visibility.Hidden;
-
-            var result = MessageBox.Show("This is a message box", "Message Box", MessageBoxButton.YesNoCancel);
-            if (result == MessageBoxResult.Yes)
-            {
-                ImageOk.Visibility = Visibility.Visible;
-            }
-            if (result == MessageBoxResult.No)
-            {
-                ImageNo.Visibility = Visibility.Visible;
-            }
-            if (result == MessageBoxResult.Cancel)
-            {
-                ImageCancel.Visibility = Visibility.Visible;
-            }
         }
 
         /// <summary>

@@ -2,7 +2,7 @@
 
 namespace CommonControls.ViewModels
 {
-    interface IBaseViewModel : INotifyPropertyChanged
+    public interface IViewModel : INotifyPropertyChanged
     {
     }
 }

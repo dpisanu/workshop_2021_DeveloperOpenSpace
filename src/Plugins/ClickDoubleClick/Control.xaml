@@ -30,19 +30,22 @@
                 <StackPanel Grid.Row="0"
                             Orientation="Horizontal"
                             HorizontalAlignment="Center">
-                    <Rectangle Name="Rectangle01" AutomationProperties.AutomationId="Rectangle01ID" MinWidth="35" MinHeight="35" Margin="1" Fill="White" Stroke="Black" />
-                    <Rectangle Name="Rectangle02" AutomationProperties.AutomationId="Rectangle02ID" MinWidth="35" MinHeight="35" Margin="1" Fill="White" Stroke="Black" />
-                    <Rectangle Name="Rectangle03" AutomationProperties.AutomationId="Rectangle03ID" MinWidth="35" MinHeight="35" Margin="1" Fill="White" Stroke="Black" />
-                    <Rectangle Name="Rectangle04" AutomationProperties.AutomationId="Rectangle04ID" MinWidth="35" MinHeight="35" Margin="1" Fill="White" Stroke="Black" />
-                </StackPanel>
-                <!-- Images -->
-                <StackPanel Grid.Row="1"
-                            Orientation="Horizontal"
-                            HorizontalAlignment="Center">
-                    <Image Name="Image01" AutomationProperties.AutomationId="ImageAButton01ID" MinWidth="35" MaxWidth="35" MinHeight="35" MaxHeight="35" Visibility="Hidden" VerticalAlignment="Top" Source="/DemoUI;component/Images/click.hand.jpg" />
-                    <Image Name="Image02" AutomationProperties.AutomationId="ImageBButton01ID" MinWidth="35" MaxWidth="35" MinHeight="35" MaxHeight="35" Visibility="Hidden" VerticalAlignment="Top" Source="/DemoUI;component/Images/click.hand.jpg" />
-                    <Image Name="Image03" AutomationProperties.AutomationId="ImageAButton02ID" MinWidth="35" MaxWidth="35" MinHeight="35" MaxHeight="35" Visibility="Hidden" VerticalAlignment="Top" Source="/DemoUI;component/Images/click.hand.jpg" />
-                    <Image Name="Image04" AutomationProperties.AutomationId="ImageBButton02ID" MinWidth="35" MaxWidth="35" MinHeight="35" MaxHeight="35" Visibility="Hidden" VerticalAlignment="Top" Source="/DemoUI;component/Images/click.hand.jpg" />
+                    <Rectangle Name="Rectangle01" 
+                               AutomationProperties.AutomationId="Rectangle01ID" 
+                               MinWidth="35" MinHeight="35" Margin="1" 
+                               Fill="{Binding FieldOneColor}" Stroke="Black" />
+                    <Rectangle Name="Rectangle02" 
+                               AutomationProperties.AutomationId="Rectangle02ID" 
+                               MinWidth="35" MinHeight="35" Margin="1" 
+                               Fill="{Binding FieldTwoColor}" Stroke="Black" />
+                    <Rectangle Name="Rectangle03" 
+                               AutomationProperties.AutomationId="Rectangle03ID" 
+                               MinWidth="35" MinHeight="35" Margin="1" 
+                               Fill="{Binding FieldThreeColor}" Stroke="Black" />
+                    <Rectangle Name="Rectangle04" 
+                               AutomationProperties.AutomationId="Rectangle04ID"
+                               MinWidth="35" MinHeight="35" Margin="1" 
+                               Fill="{Binding FieldFourColor}" Stroke="Black" />
                 </StackPanel>
             </Grid>
         </StackPanel>
@@ -52,8 +55,24 @@
                     Margin="0"
                     Orientation="Horizontal"
                     HorizontalAlignment="Center">
-            <Button Name="Button01" AutomationProperties.AutomationId="Button01ID" MinWidth="70" Padding="5" Margin="5" Content="Button 01" MouseDoubleClick="Button01MouseDoubleClick" Click="Button01Click" />
-            <Button Name="Button02" AutomationProperties.AutomationId="Button02ID" MinWidth="70" Padding="5" Margin="5" Content="Button 02" MouseDoubleClick="Button02MouseDoubleClick" Click="Button02Click" />
+            <Button Name="Button01" 
+                    AutomationProperties.AutomationId="Button01ID" 
+                    MinWidth="70" Padding="5" Margin="5" 
+                    Content="Button 01">
+                <Button.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ButtonOneClick}" CommandParameter="Click"/>
+                    <MouseBinding Gesture="LeftDoubleClick" Command="{Binding ButtonOneDoubleClick}" CommandParameter="Double Click"/>
+                </Button.InputBindings>
+            </Button>
+            <Button Name="Button02" 
+                    AutomationProperties.AutomationId="Button02ID" 
+                    MinWidth="70" Padding="5" Margin="5" 
+                    Content="Button 02">
+                <Button.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding ButtonTwoClick}" CommandParameter="Click"/>
+                    <MouseBinding Gesture="LeftDoubleClick" Command="{Binding ButtonTwoDoubleClick}" CommandParameter="Double Click"/>
+                </Button.InputBindings>
+            </Button>
         </StackPanel>
     </Grid>
 </UserControl>

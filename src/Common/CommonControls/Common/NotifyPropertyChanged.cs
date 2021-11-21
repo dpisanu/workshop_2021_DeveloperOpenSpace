@@ -12,5 +12,11 @@ namespace CommonControls.Common
             var handler = PropertyChanged;
             handler?.Invoke(this, new PropertyChangedEventArgs(property));
         }
+
+        protected void OnPropertChanged<T>(ref T field, T value, [CallerMemberName] string property = null)
+        {
+            field = value;
+            OnPropertChanged(property);
+        }
     }
 }

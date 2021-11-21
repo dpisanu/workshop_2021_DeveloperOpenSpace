@@ -37,6 +37,7 @@ class Build : NukeBuild
     AbsolutePath SourceDirectory => RootDirectory / "src";
     AbsolutePath TestsDirectory => RootDirectory / "tests";
     AbsolutePath OutputDirectory => RootDirectory / "output";
+    AbsolutePath DependencyGraphFilePath => RootDirectory / "graph.dg";
 
     Target Clean => _ => _
         .Before(Restore)
@@ -65,7 +66,12 @@ class Build : NukeBuild
                 .SetFileVersion(GitVersion.AssemblySemFileVer)
                 .SetInformationalVersion(GitVersion.InformationalVersion)
                 .EnableNoRestore()
-                .EnableDeterministic());
+                .EnableDeterministic()
+                .SetProcessArgumentConfigurator(x =>
+                    x.Add("/t:GenerateRestoreGraphFile")
+                        .Add($"/p:RestoreGraphOutputPath={DependencyGraphFilePath}")
+                )
+            );
         });
 
 }

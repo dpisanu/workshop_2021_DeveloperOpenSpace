@@ -5,7 +5,7 @@ using CommonFramework.Commands;
 
 namespace ListBox
 {
-    public class ControlViewModel : BaseViewModels
+    internal class ControlViewModel : BaseViewModels
     {
         private string _textBoxValue;
 

@@ -8,7 +8,7 @@ using CommonFramework.Commands;
 
 namespace PopUp
 {
-    public class ControlViewModel : BaseViewModels
+    internal class ControlViewModel : BaseViewModels
     {
         private ImageSource _currentImage;
 

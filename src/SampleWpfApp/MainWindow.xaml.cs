@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CommonControls.ViewModels;
 using CommonControls.Views;
 
 namespace SampleWpfApp
@@ -21,9 +22,14 @@ namespace SampleWpfApp
     /// </summary>
     public partial class MainWindow : IMainWindow
     {
+        private readonly IViewModel _dataContext;
         public MainWindow()
         {
+            _dataContext = new MainWindowViewModel();
+            DataContext = _dataContext;
+
             InitializeComponent();
+
         }
     }
 }

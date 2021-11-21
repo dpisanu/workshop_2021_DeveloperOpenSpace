@@ -7,7 +7,7 @@ using CommonFramework.Commands;
 
 namespace ContextMenu
 {
-    public class ControlViewModel : BaseViewModels
+    internal class ControlViewModel : BaseViewModels
     {
         private ImageSource _currentImage;
 

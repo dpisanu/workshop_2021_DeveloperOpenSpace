@@ -5,7 +5,7 @@ using CommonFramework.Commands;
 
 namespace ClickDoubleClick
 {
-    public class ControlViewModel : BaseViewModels
+    internal class ControlViewModel : BaseViewModels
     {
         private readonly SolidColorBrush _defaultColor = new SolidColorBrush(Colors.White);
         private readonly SolidColorBrush _redColor = new SolidColorBrush(Colors.Red);

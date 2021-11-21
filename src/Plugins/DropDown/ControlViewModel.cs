@@ -3,7 +3,7 @@ using CommonControls.ViewModels;
 
 namespace DropDown
 {
-    public class ControlViewModel : BaseViewModels
+    internal class ControlViewModel : BaseViewModels
     {
         private string _textBoxValue;
         private string _selectedItem;

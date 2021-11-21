@@ -4,7 +4,7 @@ using CommonFramework.Commands;
 
 namespace SelectionState
 {
-    public class ControlViewModel : BaseViewModels
+    internal class ControlViewModel : BaseViewModels
     {
         private string _labelContent;
 

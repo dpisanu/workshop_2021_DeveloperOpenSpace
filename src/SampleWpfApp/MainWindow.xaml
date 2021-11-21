@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="Big Business App with many Buttons" Height="450" Width="800">
     <Grid>
-
+        <ItemsControl ItemsSource="{Binding Plugins}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button Content="{Binding Title}" Command="{Binding Run}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </Grid>
 </Window>

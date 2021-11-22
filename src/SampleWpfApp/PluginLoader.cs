@@ -20,7 +20,7 @@ namespace SampleWpfApp
                 {
                     if (typeof(IPlugin).IsAssignableFrom(type))
                     {
-                        var instance = ((IPlugin)Activator.CreateInstance(type));
+                        var instance = (IPlugin)Activator.CreateInstance(type);
                         plugins.Add(instance);
                     }
                 }

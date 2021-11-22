@@ -6,11 +6,16 @@
         xmlns:local="clr-namespace:SampleWpfApp"
         mc:Ignorable="d"
         Title="Big Business App with many Buttons" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="20">
         <ItemsControl ItemsSource="{Binding Plugins}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="2" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Button Content="{Binding Title}" Command="{Binding Run}"/>
+                    <Button Content="{Binding Title}" Command="{Binding Run}" Margin="0,0,5,5"/>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>

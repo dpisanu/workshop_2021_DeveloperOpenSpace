@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System.Threading.Tasks;
+using System.Windows.Input;
 using CommonFramework.Commands;
 
 namespace Plugin
@@ -7,9 +8,9 @@ namespace Plugin
     {
         public Plugin()
         {
-            Run = new RelayCommand(RelayCommandExecute, RelayCommandCanExecute);
+            Run = new AsyncCommand<object>(RelayCommandExecuteAsync, RelayCommandCanExecute);
         }
-                
+
         public abstract string Title { get; }
 
         public virtual ICommand Run { get; internal set; }
@@ -19,6 +20,6 @@ namespace Plugin
             return true;
         }
 
-        protected abstract void RelayCommandExecute(object obj);
+        protected abstract Task RelayCommandExecuteAsync(object obj);
     }
 }

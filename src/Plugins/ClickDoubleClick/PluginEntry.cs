@@ -1,4 +1,6 @@
-﻿using System.Windows.Controls;
+﻿using System.Net.Mime;
+using System.Threading.Tasks;
+using System.Windows.Controls;
 using CommonControls.ViewModels;
 using CommonControls.Views;
 
@@ -19,9 +21,9 @@ namespace Plugins.ClickDoubleClick
 
         public override string Title => "ClickDoubleClick";
 
-        protected override void RelayCommandExecute(object obj)
+        protected override async Task RelayCommandExecuteAsync(object obj)
         {
-            _pluginwindow.Show();
+            await _pluginwindow.ShowAsync();
         }
     }
 }

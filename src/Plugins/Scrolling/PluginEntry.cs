@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System.Threading.Tasks;
+using System.Windows.Controls;
 using CommonControls.Views;
 
 namespace Plugins.Scrolling
@@ -16,9 +17,9 @@ namespace Plugins.Scrolling
 
         public override string Title => "Scrolling";
 
-        protected override void RelayCommandExecute(object obj)
+        protected override async Task RelayCommandExecuteAsync(object obj)
         {
-            _pluginwindow.Show();
+            await _pluginwindow.ShowAsync();
         }
     }
 }

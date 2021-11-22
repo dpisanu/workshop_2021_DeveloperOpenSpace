@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using MahApps.Metro.SimpleChildWindow;
@@ -16,13 +17,16 @@ namespace CommonControls.Views
             {
                 throw new Exception("User Control is null");
             }
+
             InitializeComponent();
             LayoutRoot.Children.Add(guestControl);
         }
 
-        public void Show()
+        public async Task ShowAsync()
         {
-            this.SetCurrentValue(ChildWindow.IsOpenProperty, true);
+            // Maybe not the best solution to get the window!
+            // It could also be given by a property or parameter IHostWindow
+            await Application.Current.MainWindow.ShowChildWindowAsync(this);
         }
     }
 }

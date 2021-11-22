@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System.Threading.Tasks;
+using System.Windows.Controls;
 using CommonControls.Views;
 
 namespace Plugins.Splitter
@@ -16,9 +17,9 @@ namespace Plugins.Splitter
 
         public override string Title => "Splitter";
 
-        protected override void RelayCommandExecute(object obj)
+        protected override async Task RelayCommandExecuteAsync(object obj)
         {
-            _pluginwindow.Show();
+            await _pluginwindow.ShowAsync();
         }
     }
 }

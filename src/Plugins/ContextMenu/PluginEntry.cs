@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System.Threading.Tasks;
+using System.Windows.Controls;
 using CommonControls.ViewModels;
 using CommonControls.Views;
 
@@ -19,9 +20,9 @@ namespace Plugins.ContextMenu
 
         public override string Title => "ContextMenu";
 
-        protected override void RelayCommandExecute(object obj)
+        protected override async Task RelayCommandExecuteAsync(object obj)
         {
-            _pluginwindow.Show();
+            await _pluginwindow.ShowAsync();
         }
     }
 }

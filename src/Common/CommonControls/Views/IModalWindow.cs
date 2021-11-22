@@ -1,7 +1,9 @@
-﻿namespace CommonControls.Views
+﻿using System.Threading.Tasks;
+
+namespace CommonControls.Views
 {
     public interface IModalWindow : IView
     {
-        void Show();
+        Task ShowAsync();
     }
 }

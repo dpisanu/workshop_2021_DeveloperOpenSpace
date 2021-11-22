@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace CommonControls.ViewModels
+namespace Common.CommonControls.ViewModels
 {
     public interface IViewModel : INotifyPropertyChanged
     {

@@ -1,12 +1,12 @@
 ﻿using System.Threading.Tasks;
 using System.Windows.Input;
-using CommonFramework.Commands;
+using Common.CommonFramework.Commands;
 
-namespace Plugin
+namespace Common.Plugin
 {
-    public abstract class Plugin : IPlugin
+    public abstract class PluginBase : IPlugin
     {
-        public Plugin()
+        public PluginBase()
         {
             Run = new AsyncCommand<object>(RelayCommandExecuteAsync, RelayCommandCanExecute);
         }

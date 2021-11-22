@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
-using CommonControls.ViewModels;
-using Plugin;
+using Common.CommonControls.ViewModels;
+using Common.Plugin;
 
 namespace SampleWpfApp
 {

@@ -1,6 +1,6 @@
 using System.Windows.Input;
-using CommonControls.ViewModels;
-using CommonFramework.Commands;
+using Common.CommonControls.ViewModels;
+using Common.CommonFramework.Commands;
 
 namespace Plugins.SelectionState
 {

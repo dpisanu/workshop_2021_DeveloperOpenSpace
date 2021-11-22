@@ -2,8 +2,8 @@ using System;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using CommonControls.ViewModels;
-using CommonFramework.Commands;
+using Common.CommonControls.ViewModels;
+using Common.CommonFramework.Commands;
 
 namespace Plugins.ContextMenu
 {

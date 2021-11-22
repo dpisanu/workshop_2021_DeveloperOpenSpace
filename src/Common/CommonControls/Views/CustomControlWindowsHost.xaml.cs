@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using MahApps.Metro.SimpleChildWindow;
 
-namespace CommonControls.Views
+namespace Common.CommonControls.Views
 {
     /// <summary>
     /// Interaction logic for CustomControlWindowsHost.xaml

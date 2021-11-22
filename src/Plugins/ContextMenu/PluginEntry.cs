@@ -1,11 +1,12 @@
 ﻿using System.Threading.Tasks;
 using System.Windows.Controls;
-using CommonControls.ViewModels;
-using CommonControls.Views;
+using Common.CommonControls.ViewModels;
+using Common.CommonControls.Views;
+using Common.Plugin;
 
 namespace Plugins.ContextMenu
 {
-    public class PluginEntry : Plugin.Plugin
+    public class PluginEntry : PluginBase
     {
         private readonly IViewModel _dataContext;
         private readonly UserControl _userControl;

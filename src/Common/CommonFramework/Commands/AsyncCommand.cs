@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace CommonFramework.Commands
+namespace Common.CommonFramework.Commands
 {
     public interface IErrorHandler
     {

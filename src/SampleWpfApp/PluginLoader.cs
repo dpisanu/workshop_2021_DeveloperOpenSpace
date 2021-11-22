@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 using System.Reflection;
-using Plugin;
+using Common.Plugin;
 
 namespace SampleWpfApp
 {

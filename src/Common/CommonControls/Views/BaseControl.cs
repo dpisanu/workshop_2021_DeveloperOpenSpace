@@ -1,7 +1,7 @@
 ﻿using System.Windows.Controls;
-using CommonControls.ViewModels;
+using Common.CommonControls.ViewModels;
 
-namespace CommonControls.Views
+namespace Common.CommonControls.Views
 {
     public class BaseControl : UserControl
     {

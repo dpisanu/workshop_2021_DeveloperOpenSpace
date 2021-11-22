@@ -1,10 +1,11 @@
 ﻿using System.Threading.Tasks;
 using System.Windows.Controls;
-using CommonControls.Views;
+using Common.CommonControls.Views;
+using Common.Plugin;
 
 namespace Plugins.Splitter
 {
-    public class PluginEntry : Plugin.Plugin
+    public class PluginEntry : PluginBase
     {
         private readonly UserControl _userControl;
         private readonly IModalWindow _pluginwindow;

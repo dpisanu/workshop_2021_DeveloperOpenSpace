@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 using System.Windows.Media;
-using CommonControls.ViewModels;
+using Common.CommonControls.ViewModels;
 //using CommonControls.Views;
 
 namespace Plugins.ClickDoubleClick

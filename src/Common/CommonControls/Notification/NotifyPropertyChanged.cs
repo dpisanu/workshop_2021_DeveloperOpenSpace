@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace CommonControls.Common
+namespace Common.CommonControls.Notification
 {
     public abstract class NotifyPropertyChanged : INotifyPropertyChanged
     {

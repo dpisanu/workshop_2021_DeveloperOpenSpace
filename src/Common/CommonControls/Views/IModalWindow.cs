@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace CommonControls.Views
+namespace Common.CommonControls.Views
 {
     public interface IModalWindow : IView
     {

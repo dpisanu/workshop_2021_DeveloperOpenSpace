@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CommonFramework.Commands
+namespace Common.CommonFramework.Commands
 {
     public class RelayCommand : BaseCommand
     {

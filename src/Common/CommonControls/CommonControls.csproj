@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <AssemblyName>Common.CommonControls</AssemblyName>
+    <RootNamespace>Common.CommonControls</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

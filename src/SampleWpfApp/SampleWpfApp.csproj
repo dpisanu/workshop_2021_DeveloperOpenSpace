@@ -9,6 +9,15 @@
   <ItemGroup>
     <ProjectReference Include="..\Common\CommonControls\CommonControls.csproj" />
     <ProjectReference Include="..\Common\Plugin\Plugin.csproj" />
+    <ProjectReference Include="..\Plugins\ClickDoubleClick\ClickDoubleClick.csproj" />
+    <ProjectReference Include="..\Plugins\ContextMenu\ContextMenu.csproj" />
+    <ProjectReference Include="..\Plugins\DragDrop\DragDrop.csproj" />
+    <ProjectReference Include="..\Plugins\DropDown\DropDown.csproj" />
+    <ProjectReference Include="..\Plugins\ListBox\ListBox.csproj" />
+    <ProjectReference Include="..\Plugins\PopUp\PopUp.csproj" />
+    <ProjectReference Include="..\Plugins\Scrolling\Scrolling.csproj" />
+    <ProjectReference Include="..\Plugins\SelectionState\SelectionState.csproj" />
+    <ProjectReference Include="..\Plugins\Splitter\Splitter.csproj" />
   </ItemGroup>
 
 </Project>

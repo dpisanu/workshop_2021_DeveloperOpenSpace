@@ -2,9 +2,9 @@
 using CommonControls.ViewModels;
 using CommonControls.Views;
 
-namespace ClickDoubleClick
+namespace Plugins.ClickDoubleClick
 {
-    class PluginEntry : Plugin.Plugin
+    public class PluginEntry : Plugin.Plugin
     {
         private readonly IViewModel _dataContext;
         private readonly UserControl _userControl;

@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using CommonControls.ViewModels;
 
-namespace ContextMenu
+namespace Plugins.ContextMenu
 {
     /// <summary>
     /// Interaction logic for Control.xaml

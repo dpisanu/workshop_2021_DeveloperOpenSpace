@@ -2,7 +2,7 @@ using System.Windows.Input;
 using CommonControls.ViewModels;
 using CommonFramework.Commands;
 
-namespace SelectionState
+namespace Plugins.SelectionState
 {
     internal class ControlViewModel : BaseViewModels
     {

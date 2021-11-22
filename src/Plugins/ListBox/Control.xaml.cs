@@ -1,7 +1,7 @@
 ﻿using System.Windows.Controls;
 using CommonControls.ViewModels;
 
-namespace ListBox
+namespace Plugins.ListBox
 {
     /// <summary>
     /// Interaction logic for Control.xaml

@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
-    <AssemblyName>ContextMenu</AssemblyName>
-    <RootNamespace>ContextMenu</RootNamespace>
+    <AssemblyName>Plugins.ContextMenu</AssemblyName>
+    <RootNamespace>Plugins.ContextMenu</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

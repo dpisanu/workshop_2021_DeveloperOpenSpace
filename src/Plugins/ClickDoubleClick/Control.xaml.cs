@@ -3,7 +3,7 @@ using System.Windows.Media;
 using CommonControls.ViewModels;
 //using CommonControls.Views;
 
-namespace ClickDoubleClick
+namespace Plugins.ClickDoubleClick
 {
     /// <summary>
     ///     Interaction logic for Control.xaml

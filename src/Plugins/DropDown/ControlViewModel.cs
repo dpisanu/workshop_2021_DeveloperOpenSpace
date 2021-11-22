@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using CommonControls.ViewModels;
 
-namespace DropDown
+namespace Plugins.DropDown
 {
     internal class ControlViewModel : BaseViewModels
     {

@@ -5,7 +5,7 @@ using System.Windows.Media.Imaging;
 using CommonControls.ViewModels;
 using CommonFramework.Commands;
 
-namespace ContextMenu
+namespace Plugins.ContextMenu
 {
     internal class ControlViewModel : BaseViewModels
     {

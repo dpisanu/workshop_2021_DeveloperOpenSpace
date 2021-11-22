@@ -1,9 +1,9 @@
 ﻿using System.Windows.Controls;
 using CommonControls.Views;
 
-namespace DragDrop
+namespace Plugins.DragDrop
 {
-    class PluginEntry : Plugin.Plugin
+    public class PluginEntry : Plugin.Plugin
     {
         private readonly UserControl _userControl;
         private readonly IModalWindow _pluginwindow;

@@ -1,7 +1,7 @@
 ﻿using System.Windows.Controls;
 using CommonControls.ViewModels;
 
-namespace DropDown
+namespace Plugins.DropDown
 {
     /// <summary>
     /// Interaction logic for Control.xaml

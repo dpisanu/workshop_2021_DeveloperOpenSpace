@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace Scrolling
+namespace Plugins.Scrolling
 {
     /// <summary>
     /// Interaction logic for Control.xaml

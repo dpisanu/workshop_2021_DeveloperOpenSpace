@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace Splitter
+namespace Plugins.Splitter
 {
     /// <summary>
     /// Interaction logic for Control.xaml

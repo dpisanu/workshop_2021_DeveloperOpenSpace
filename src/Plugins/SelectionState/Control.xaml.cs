@@ -1,7 +1,7 @@
 ﻿using System.Windows.Controls;
 using CommonControls.ViewModels;
 
-namespace SelectionState
+namespace Plugins.SelectionState
 {
     /// <summary>
     /// Interaction logic for Control.xaml

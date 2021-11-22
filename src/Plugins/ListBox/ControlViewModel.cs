@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using CommonControls.ViewModels;
 using CommonFramework.Commands;
 
-namespace ListBox
+namespace Plugins.ListBox
 {
     internal class ControlViewModel : BaseViewModels
     {

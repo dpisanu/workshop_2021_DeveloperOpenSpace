@@ -1,7 +1,7 @@
 ﻿using System.Windows.Controls;
 using CommonControls.ViewModels;
 
-namespace PopUp
+namespace Plugins.PopUp
 {
     /// <summary>
     /// Interaction logic for Control.xaml

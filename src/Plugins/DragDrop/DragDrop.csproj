@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
-    <AssemblyName>DragDrop</AssemblyName>
-    <RootNamespace>DragDrop</RootNamespace>
+    <AssemblyName>Plugins.DragDrop</AssemblyName>
+    <RootNamespace>Plugins.DragDrop</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

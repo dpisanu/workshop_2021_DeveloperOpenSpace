@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <AssemblyName>Plugins.PopUp</AssemblyName>
+    <RootNamespace>Plugins.PopUp</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

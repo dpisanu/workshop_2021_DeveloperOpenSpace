@@ -3,7 +3,7 @@ using System.Windows.Media;
 using CommonControls.ViewModels;
 using CommonFramework.Commands;
 
-namespace ClickDoubleClick
+namespace Plugins.ClickDoubleClick
 {
     internal class ControlViewModel : BaseViewModels
     {

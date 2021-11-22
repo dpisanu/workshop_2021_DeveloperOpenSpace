@@ -16,15 +16,7 @@ namespace SampleWpfApp
 
         private void LoadPlugins()
         {
-            Plugins.Add(new Plugins.ClickDoubleClick.PluginEntry());
-            Plugins.Add(new Plugins.ContextMenu.PluginEntry());
-            Plugins.Add(new Plugins.DragDrop.PluginEntry());
-            Plugins.Add(new Plugins.DropDown.PluginEntry());
-            Plugins.Add(new Plugins.ListBox.PluginEntry());
-            Plugins.Add(new Plugins.PopUp.PluginEntry());
-            Plugins.Add(new Plugins.Scrolling.PluginEntry());
-            Plugins.Add(new Plugins.SelectionState.PluginEntry());
-            Plugins.Add(new Plugins.Splitter.PluginEntry());
+            Plugins = new ObservableCollection<IPlugin>(PluginLoader.LoadPlugins());
         }
     }
 }

@@ -27,6 +27,7 @@
 # Paths
 **/obj/*
 **/bin/*
+**/binTest/**
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

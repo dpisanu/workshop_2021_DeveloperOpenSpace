@@ -7,6 +7,14 @@
     <RootNamespace>Plugins.ContextMenu</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\..\bin\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\..\bin\</OutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\..\Common\CommonControls\CommonControls.csproj" />
     <ProjectReference Include="..\..\Common\CommonFramework\CommonFramework.csproj" />

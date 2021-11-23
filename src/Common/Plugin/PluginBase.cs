@@ -8,7 +8,7 @@ namespace Common.Plugin
     {
         public PluginBase()
         {
-            Run = new AsyncCommand<object>(RelayCommandExecuteAsync, RelayCommandCanExecute);
+            Run = new AsyncRelayCommand<object>(RelayCommandExecuteAsync, RelayCommandCanExecute);
         }
 
         public abstract string Title { get; }

@@ -7,7 +7,7 @@ using Common.CommonFramework.Commands;
 
 namespace Plugins.ContextMenu
 {
-    internal class ControlViewModel : BaseViewModels
+    public class ControlViewModel : BaseViewModels
     {
         private ImageSource _currentImage;
 

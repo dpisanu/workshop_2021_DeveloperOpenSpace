@@ -4,7 +4,7 @@ using System.Windows.Input;
 
 namespace Common.CommonFramework.Commands
 {
-    public class AsyncCommand<T> : IAsyncCommand<T>
+    public sealed class AsyncRelayCommand<T> : IAsyncCommand<T>
     {
         public event EventHandler CanExecuteChanged;
 
@@ -13,7 +13,7 @@ namespace Common.CommonFramework.Commands
         private readonly Func<T, bool> _canExecute;
         private readonly IErrorHandler _errorHandler;
 
-        public AsyncCommand(Func<T, Task> execute, Func<T, bool> canExecute = null, IErrorHandler errorHandler = null)
+        public AsyncRelayCommand(Func<T, Task> execute, Func<T, bool> canExecute = null, IErrorHandler errorHandler = null)
         {
             _execute = execute;
             _canExecute = canExecute;

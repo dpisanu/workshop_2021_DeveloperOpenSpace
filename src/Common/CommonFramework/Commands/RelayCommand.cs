@@ -2,7 +2,7 @@
 
 namespace Common.CommonFramework.Commands
 {
-    public class RelayCommand : BaseCommand
+    public sealed class RelayCommand : BaseCommand
     {
         private readonly Predicate<object> _canExecute;
         private readonly Action<object> _execute;

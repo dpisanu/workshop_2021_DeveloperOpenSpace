@@ -4,7 +4,7 @@ using Common.Plugin;
 
 namespace SampleWpfApp
 {
-    internal class MainWindowViewModel : BaseViewModels
+    public class MainWindowViewModel : BaseViewModels
     {
         public MainWindowViewModel()
         {

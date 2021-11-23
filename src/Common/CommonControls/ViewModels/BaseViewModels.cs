@@ -1,6 +1,6 @@
 namespace Common.CommonControls.ViewModels
 {
-    public class BaseViewModels : Notification.NotifyPropertyChanged, IViewModel
+    public abstract class BaseViewModels : Notification.NotifyPropertyChanged, IViewModel
     {
     }
 }

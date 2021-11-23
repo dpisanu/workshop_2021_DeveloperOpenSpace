@@ -4,7 +4,7 @@ using Common.CommonFramework.Commands;
 
 namespace Plugins.SelectionState
 {
-    internal class ControlViewModel : BaseViewModels
+    public class ControlViewModel : BaseViewModels
     {
         private string _labelContent;
 

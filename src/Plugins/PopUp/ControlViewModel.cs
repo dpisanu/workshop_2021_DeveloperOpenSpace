@@ -8,7 +8,7 @@ using Common.CommonFramework.Commands;
 
 namespace Plugins.PopUp
 {
-    internal class ControlViewModel : BaseViewModels
+    public class ControlViewModel : BaseViewModels
     {
         private ImageSource _currentImage;
 

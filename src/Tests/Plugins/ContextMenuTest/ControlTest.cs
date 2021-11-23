@@ -2,6 +2,7 @@
 
 namespace ContextMenuTest
 {
+    [Apartment(System.Threading.ApartmentState.STA)]
     public class ControlTest
     {
         [SetUp]

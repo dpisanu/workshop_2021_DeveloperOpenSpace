@@ -2,6 +2,7 @@
 
 namespace SampleWpfAppTest
 {
+    [Apartment(System.Threading.ApartmentState.STA)]
     public class MainWindowViewModelTest
     {
         [SetUp]

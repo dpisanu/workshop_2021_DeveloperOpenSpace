@@ -2,6 +2,7 @@ using NUnit.Framework;
 
 namespace ClickDoubleClickTest
 {
+    [Apartment(System.Threading.ApartmentState.STA)]
     public class PluginEntryTest
     {
         [SetUp]

@@ -2,6 +2,7 @@ using NUnit.Framework;
 
 namespace PopUpTest
 {
+    [Apartment(System.Threading.ApartmentState.STA)]
     public class PluginEntryTest
     {
         [SetUp]

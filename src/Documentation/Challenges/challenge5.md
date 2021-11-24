@@ -9,7 +9,7 @@ Now let's connect these steps to identify each fingerprint change and store thes
 
 _Hint: Use the simplest fingerprinting mechanism for now_
 
-[Possible solution](./Solutions/challenge5.md)
+[🕵️‍♀ Possible solution](./Solutions/challenge5.md)
 
 ---------------------------------------
 [⏭ Next challenge](./challenge6.md)

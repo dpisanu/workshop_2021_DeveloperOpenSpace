@@ -21,7 +21,7 @@ This part is tricky a bit tricky but there is an entry point to the topic via th
 
 _Hint: For this an extension method is provided to make the traversal easier._
 
-[Possible solution](./Solutions/challenge6.md)
+[🕵️‍♀ Possible solution](./Solutions/challenge6.md)
 
 ---------------------------------------
 [⏭ Next challenge](./challenge7.md)

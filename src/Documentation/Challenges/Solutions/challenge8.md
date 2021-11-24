@@ -63,6 +63,6 @@ PS > .\build.ps1 IdentifyChangedDependenciesForTestAssemblies
 ```
 
 ---------------------------------------
-[Return to challenge](../challenge7.md)
+[🔙 Return to challenge](../challenge8.md)
 
 [🚦 Return to start](../start.md)

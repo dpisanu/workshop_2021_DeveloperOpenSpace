@@ -6,9 +6,7 @@ It is not enough to **only** map out the Fingerprint signatures of the dependenc
 
 #### Task: Extend the challenge 7 solution to also account for Test assembly changes and create a list of assemblies ready for testing.
 
-[Possible solution](./Solutions/challenge8.md)
+[🕵️‍♀ Possible solution](./Solutions/challenge8.md)
 
 ---------------------------------------
-[⏭ Next challenge](./challenge8.md)
-
 [🚦 Return to start](./start.md)

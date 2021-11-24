@@ -7,7 +7,7 @@ But what is our actual runtime?
 
 #### Task: Time your test execution via code.
 
-[Possible solution](./Solutions/challenge1.md)
+[🕵️‍♀ Possible solution](./Solutions/challenge1.md)
 
 ---------------------------------------
 [⏭ Next challenge](./challenge2.md)

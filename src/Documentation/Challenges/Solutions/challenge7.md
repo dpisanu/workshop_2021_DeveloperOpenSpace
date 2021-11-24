@@ -54,6 +54,6 @@ What did you notice while solving this Challenge?
 Did you run into **any** issues?
 
 ---------------------------------------
-[Return to challenge](../challenge7.md)
+[🔙 Return to challenge](../challenge7.md)
 
 [🚦 Return to start](../start.md)

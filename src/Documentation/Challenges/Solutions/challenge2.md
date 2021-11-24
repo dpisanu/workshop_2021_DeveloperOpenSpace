@@ -38,6 +38,6 @@ Get-FileHash .\SampleWpfApp.exe | Select-Object -ExpandProperty Hash
 ```
 
 ---------------------------------------
-[Return to challenge](../challenge2.md)
+[🔙 Return to challenge](../challenge2.md)
 
 [🚦 Return to start](../start.md)

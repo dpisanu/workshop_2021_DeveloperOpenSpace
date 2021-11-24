@@ -62,6 +62,6 @@ PS > .\build.ps1 MapDependenciesOfTestAssemblies
 ```
 
 ---------------------------------------
-[Return to challenge](../challenge6.md)
+[🔙 Return to challenge](../challenge6.md)
 
 [🚦 Return to start](../start.md)

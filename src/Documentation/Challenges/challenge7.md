@@ -15,7 +15,7 @@ The logic steps here are:
 
 #### Task: Identify all dependency changes, give a list of Test assemblies affected, store new Fingerprint values
 
-[Possible solution](./Solutions/challenge7.md)
+[🕵️‍♀️ Possible solution](./Solutions/challenge7.md)
 
 ---------------------------------------
 [⏭ Next challenge](./challenge8.md)

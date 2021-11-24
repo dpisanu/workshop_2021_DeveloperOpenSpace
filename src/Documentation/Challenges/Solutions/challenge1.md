@@ -35,6 +35,6 @@ Measure-Command { dotnet.exe VSTest *test.dll | Out-Default }
 ```
 
 ---------------------------------------
-[Return to challenge](../challenge1.md)
+[🔙 Return to challenge](../challenge1.md)
 
 [🚦 Return to start](../start.md)

@@ -43,6 +43,6 @@ PS > .\build.ps1 HashAllAssemblies
 ```
 
 ---------------------------------------
-[Return to challenge](../challenge5.md)
+[🔙 Return to challenge](../challenge5.md)
 
 [🚦 Return to start](../start.md)

@@ -66,11 +66,6 @@ class Build : NukeBuild
                 .SetFileVersion(GitVersion.AssemblySemFileVer)
                 .SetInformationalVersion(GitVersion.InformationalVersion)
                 .EnableNoRestore()
-                .EnableDeterministic()
-                .SetProcessArgumentConfigurator(x =>
-                    x.Add("/t:GenerateRestoreGraphFile")
-                        .Add($"/p:RestoreGraphOutputPath={DependencyGraphFilePath}")
-                )
             );
         });
 

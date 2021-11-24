@@ -31,8 +31,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scrolling", "src\Plugins\Sc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Splitter", "src\Plugins\Splitter\Splitter.csproj", "{1A937812-E303-46AE-81AF-6CC9188DD922}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{16841D4E-2B4B-41A6-A2D5-1DF2339415E9}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonFramework", "src\Common\CommonFramework\CommonFramework.csproj", "{AAFA2CFE-DCE2-4EBE-8D82-57D2415854EB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugin", "src\Common\Plugin\Plugin.csproj", "{2355231F-918A-4773-9625-4A105831C164}"
@@ -121,8 +119,6 @@ Global
 		{1A937812-E303-46AE-81AF-6CC9188DD922}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A937812-E303-46AE-81AF-6CC9188DD922}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A937812-E303-46AE-81AF-6CC9188DD922}.Release|Any CPU.Build.0 = Release|Any CPU
-		{16841D4E-2B4B-41A6-A2D5-1DF2339415E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{16841D4E-2B4B-41A6-A2D5-1DF2339415E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAFA2CFE-DCE2-4EBE-8D82-57D2415854EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AAFA2CFE-DCE2-4EBE-8D82-57D2415854EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAFA2CFE-DCE2-4EBE-8D82-57D2415854EB}.Release|Any CPU.ActiveCfg = Release|Any CPU

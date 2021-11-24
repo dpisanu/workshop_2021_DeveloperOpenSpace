@@ -1,6 +1,6 @@
 ## Repository
 
-This repository contains all the required content for the [Developer Open  Scpace](https://devopenspace.de/) workshop on deterministic builds in C#.
+This repository contains all the required content for the [Developer Open Space](https://devopenspace.de/) workshop on deterministic builds in C#.
 
 The premise of the workshop is the use, development and testing of a standard big corp. in-house WPF application.
 

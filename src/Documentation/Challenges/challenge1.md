@@ -5,6 +5,6 @@
 We have seen how to execute out tests from the dotnet CLI.   
 But what is our actual runtime?
 
-**Task:** Time your test execution via code.
+#### Task: Time your test execution via code.
 
 [Possible solution](./Solutions/challenge1.md)

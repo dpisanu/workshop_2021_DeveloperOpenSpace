@@ -14,7 +14,7 @@ Come in [/njuːk/](https://nuke.build/).
     <img alt="Nuke" src="./nuke.png" width="300" height="200">
 </p>
 
-**Task:** Install NUKE in order to continue all build related tasks in C#.
+#### Task: Install NUKE in order to continue all build related tasks in C#.
 
 Let's [install](https://www.nuke.build/docs/getting-started/setup.html) NUKE as a global tool in order to orchestrate our build environment properly.
 

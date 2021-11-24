@@ -51,7 +51,7 @@ Target IdentifyChangedDependenciesForTestAssemblies => _ => _
         newHashes.ForEach(hash => dependencyHashStorage.StoreHash(hash));
         testAssemblies.ForEach(hashTuple => dependencyHashStorage.StoreHash(hashTuple.Item2));
         Console.WriteLine($"Added {newHashes.Count} new dependency hashes");
-        Console.WriteLine($"testAssemblies {newHashes.Count} new test hashes");
+        Console.WriteLine($"testAssemblies {testAssemblies.Count} new test hashes");
 
         dependencyHashStorage.Dispose();
     });

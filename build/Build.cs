@@ -1,5 +1,8 @@
 using System;
+using System.IO;
 using System.Linq;
+using DependencyAnalysis;
+using NuGet.ProjectModel;
 using Nuke.Common;
 using Nuke.Common.CI;
 using Nuke.Common.Execution;
@@ -24,8 +27,7 @@ class Build : NukeBuild
     ///   - JetBrains Rider            https://nuke.build/rider
     ///   - Microsoft VisualStudio     https://nuke.build/visualstudio
     ///   - Microsoft VSCode           https://nuke.build/vscode
-
-    public static int Main () => Execute<Build>(x => x.Compile);
+    public static int Main() => Execute<Build>(x => x.Compile);
 
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
@@ -69,4 +71,19 @@ class Build : NukeBuild
             );
         });
 
+    Target GetAssembliesToTest => _ => _
+        .OnlyWhenDynamic(() => File.Exists(DependencyGraphFilePath))
+        .Executes(() =>
+        {
+            var dependencyHashStorage = new DependencyHashStorage(RootDirectory);
+
+            var dependencyGraph = DependencyGraphSpec.Load(DependencyGraphFilePath);
+
+            var pr = dependencyGraph.Projects.Single(p => p.Name == "SampleWpfApp");
+            var projectReferences = pr.GetProjectReferences();
+
+            projectReferences.ForEach(p => Console.WriteLine(p));
+
+            dependencyHashStorage.Dispose();
+        });
 }

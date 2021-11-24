@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="NuGet.ProjectModel" Version="6.0.0" />
     <PackageReference Include="Nuke.Common" Version="5.3.0" />
     <PackageDownload Include="GitVersion.Tool" Version="[5.6.7]" />
   </ItemGroup>

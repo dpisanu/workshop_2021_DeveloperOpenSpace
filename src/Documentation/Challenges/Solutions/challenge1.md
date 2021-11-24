@@ -6,7 +6,7 @@ There are multiple ways of timing your test execution.
 You can use a dedicated test runner such as NUnit which provides a detailed run time log OR you wrap your dotnet CLI call in some powershell.  
   
 ```powershell
-Measure-Command { dotnet.exe VSTest *test.dll }
+Measure-Command { dotnet.exe vstest *test.dll }
 ```
 
 This will leave you with the following output:
@@ -33,3 +33,8 @@ Try piping your **stdout** on the powershell call instead.
 ```powershell
 Measure-Command { dotnet.exe VSTest *test.dll | Out-Default }
 ```
+
+---------------------------------------
+[Return to challenge](../challenge1.md)
+
+[🚦 Return to start](../start.md)

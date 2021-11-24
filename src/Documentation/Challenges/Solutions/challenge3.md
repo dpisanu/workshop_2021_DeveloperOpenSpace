@@ -21,3 +21,8 @@ This flag causes the compiler to produce an assembly whose **byte-for-byte outpu
 
 It's _as simple_ as that. No need for elaborate tooling in shape of [Source Link](https://github.com/clairernovotny/DeterministicBuilds) or such.  
 The paradigm is becoming the de facto norm and if you want to know more, read up on this article from the Conan community for [Deterministic builds in C/C++](https://blog.conan.io/2019/09/02/Deterministic-builds-with-C-C++.html)
+
+---------------------------------------
+[Return to challenge](../challenge3.md)
+
+[🚦 Return to start](../start.md)

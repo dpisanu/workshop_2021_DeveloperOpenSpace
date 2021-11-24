@@ -73,7 +73,9 @@
             "enum": [
               "Clean",
               "Compile",
-              "GetAssembliesToTest",
+              "HashAllAssemblies",
+              "IdentifyChangedDependenciesForTestAssemblies",
+              "MapDependenciesOfTestAssemblies",
               "Restore"
             ]
           }
@@ -90,7 +92,9 @@
             "enum": [
               "Clean",
               "Compile",
-              "GetAssembliesToTest",
+              "HashAllAssemblies",
+              "IdentifyChangedDependenciesForTestAssemblies",
+              "MapDependenciesOfTestAssemblies",
               "Restore"
             ]
           }

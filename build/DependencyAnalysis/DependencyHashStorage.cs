@@ -24,9 +24,7 @@ namespace DependencyAnalysis
 
         private string GetStorageFilePath() => Path.Combine(_storageDirectoryPath, "Hashes.txt");
 
-        public void StoreHash(string hash) => _hashes.Add(hash);
-
-        public void StoreFileHash(string filePath)
+        public string GenerateHash(string filePath)
         {
             var fileInfo = new FileInfo(filePath);
             using var stream = fileInfo.OpenRead();
@@ -37,11 +35,24 @@ namespace DependencyAnalysis
             }
 
             var hashString = BitConverter.ToString(hash).Replace("-", "");
+            return hashString;
+        }
 
-            StoreHash(hashString);
+        public void StoreHash(string hash) => _hashes.Add(hash);
+
+        public void StoreFileHash(string filePath)
+        {
+            var hash = GenerateHash(filePath);
+            StoreHash(hash);
         }
 
         public bool IsHashKnown(string hash) => _hashes.Contains(hash);
+
+        public bool IsHashKnownForFile(string filePath)
+        {
+            var hash = GenerateHash(filePath);
+            return IsHashKnown(hash);
+        }
 
         public void Dispose()
         {

@@ -57,7 +57,8 @@ In this scenario we are working with _DotNetBuildSettings_ and here the method t
 
 Save your changes and now you can use the NUKE build script to compile your solution.
 ```powershell
-> dotnet build
+PS > .\build.ps1
+
 PowerShell Desktop version 5.1.19041.1320
 Microsoft (R) .NET Core SDK version 5.0.403
 
@@ -83,3 +84,8 @@ Total                              0:26
 
 Build succeeded on 24.11.2021 16:46:03. ＼（＾ᴗ＾）／
 ```
+
+---------------------------------------
+[⏭ Next challenge](./challenge5.md)
+
+[🚦 Return to start](./start.md)

@@ -8,3 +8,8 @@ As in, how trust worthy is thing fingerprinting mechanism really?
 #### Task: Check if fingerprinting holds up to the test of a recompile without a change.
 
 [Possible solution](./Solutions/challenge3.md)
+
+---------------------------------------
+[⏭ Next challenge](./challenge4.md)
+
+[🚦 Return to start](./start.md)

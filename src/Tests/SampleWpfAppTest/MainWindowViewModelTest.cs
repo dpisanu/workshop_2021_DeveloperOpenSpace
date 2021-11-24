@@ -13,7 +13,7 @@ namespace SampleWpfAppTest
         [Test]
         public void Ctor()
         {
-            Assert.DoesNotThrow(() => new Plugins.Splitter.Control());
+            Assert.DoesNotThrow(() => new SampleWpfApp.MainWindowViewModel());
         }
     }
 }

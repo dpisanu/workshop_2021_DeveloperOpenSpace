@@ -36,3 +36,8 @@ If you just want to see the calculated hash then use the following command:
 ```powershell
 Get-FileHash .\SampleWpfApp.exe | Select-Object -ExpandProperty Hash
 ```
+
+---------------------------------------
+[Return to challenge](../challenge2.md)
+
+[🚦 Return to start](../start.md)

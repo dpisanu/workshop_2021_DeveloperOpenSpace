@@ -21,6 +21,9 @@
 # MSBuild Build artifacts
 *.dg
 
+# Hashing artifacts
+Hashes.txt
+
 # Temporary files
 *.bak
 

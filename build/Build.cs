@@ -155,9 +155,17 @@ class Build : NukeBuild
                 var packageSpecDependencies = packageSpec.GetAllProjectReferences(dependencyGraph);
                 // loop over all dependencies
                 foreach (var dependencyCSProjectPath in packageSpecDependencies)
-                { 
+                {
                     // get path to dependency
+                    foreach (var p in dependencyGraph.Projects)
+                    {
+                        Console.WriteLine($"-> {p.GetBinPath()}");
+                    }
                     var dependencyBinPath = dependencyGraph.Projects.Single(p => p.FilePath == dependencyCSProjectPath).GetBinPath();
+                    if (!dependencyBinPath.Contains(".dll"))
+                    {
+                        dependencyBinPath = dependencyBinPath.Replace("dll", ".dll");
+                    }
                     // generate hash
                     var hash = dependencyHashStorage.GenerateHash(dependencyBinPath);
                     if (!dependencyHashStorage.IsHashKnown(hash))
@@ -171,7 +179,7 @@ class Build : NukeBuild
             newHashes.ForEach(hash => dependencyHashStorage.StoreHash(hash));
             testAssemblies.ForEach(hashTuple => dependencyHashStorage.StoreHash(hashTuple.Item2));
             Console.WriteLine($"Added {newHashes.Count} new dependency hashes");
-            Console.WriteLine($"testAssemblies {newHashes.Count} new test hashes");
+            Console.WriteLine($"testAssemblies {testAssemblies.Count} new test hashes");
 
             dependencyHashStorage.Dispose();
         });

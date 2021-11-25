@@ -13,7 +13,7 @@ Target IdentifyChangedDependenciesForTestAssemblies => _ => _
     {
         var dependencyHashStorage = new DependencyHashStorage(RootDirectory);
         var newHashes = new HashSet<string>();
-        var testAssemblies = new HashSet<Tuple<string, string>>();
+        var testsToRun = new HashSet<string>();
 
         // Load graph
         var dependencyGraph = DependencyGraphSpec.Load(DependencyGraphFilePath);
@@ -23,20 +23,21 @@ Target IdentifyChangedDependenciesForTestAssemblies => _ => _
         // loop over test assemblies
         foreach (var testFile in testFiles)
         {
-             // generate hash
+            // generate hash
             var testHash = dependencyHashStorage.GenerateHash(testFile);
             if (!dependencyHashStorage.IsHashKnown(testHash))
             {
                 // add new hash to list because it is not known
-                testAssemblies.Add(new Tuple<string, string>(testFile, testHash));
+                newHashes.Add(testHash);
+                // add test assembly to run list
+                testsToRun.Add(testFile);
             }
             // Determine dependencies for test assembly
             var packageSpec = dependencyGraph.Projects.Single(p => p.GetBinPath() == testFile);
             var packageSpecDependencies = packageSpec.GetAllProjectReferences(dependencyGraph);
             // loop over all dependencies
             foreach (var dependencyCSProjectPath in packageSpecDependencies)
-            { 
-                // get path to dependency
+            {
                 var dependencyBinPath = dependencyGraph.Projects.Single(p => p.FilePath == dependencyCSProjectPath).GetBinPath();
                 // generate hash
                 var hash = dependencyHashStorage.GenerateHash(dependencyBinPath);
@@ -44,14 +45,14 @@ Target IdentifyChangedDependenciesForTestAssemblies => _ => _
                 {
                     // add new hash to list because it is not known
                     newHashes.Add(hash);
-                    testAssemblies.Add(new Tuple<string, string>(testFile, testHash));
+                    // add test assembly to run list
+                    testsToRun.Add(testFile);
                 }
             }
         }
         newHashes.ForEach(hash => dependencyHashStorage.StoreHash(hash));
-        testAssemblies.ForEach(hashTuple => dependencyHashStorage.StoreHash(hashTuple.Item2));
         Console.WriteLine($"Added {newHashes.Count} new dependency hashes");
-        Console.WriteLine($"testAssemblies {testAssemblies.Count} new test hashes");
+        testsToRun.ForEach(testAssembly => Console.WriteLine($"Test Assembly to run {testAssembly}"));
 
         dependencyHashStorage.Dispose();
     });
@@ -61,6 +62,35 @@ Give this **Target** a spin with the following command:
 ```powershell
 PS > .\build.ps1 IdentifyChangedDependenciesForTestAssemblies
 ```
+
+```dos
+╬═════════════════════════════════════════════════
+║ IdentifyChangedDependenciesForTestAssemblies
+╬════════════════════════════════════════
+
+Added 25 new dependency hashes
+Test Assembly to run C:\src\devopenspace\binTest\ClickDoubleClickTest.dll
+Test Assembly to run C:\src\devopenspace\binTest\CommonControlsTest.dll
+Test Assembly to run C:\src\devopenspace\binTest\CommonFrameworkTest.dll
+Test Assembly to run C:\src\devopenspace\binTest\ContextMenuTest.dll
+Test Assembly to run C:\src\devopenspace\binTest\DragDropTest.dll
+Test Assembly to run C:\src\devopenspace\binTest\DropDownTest.dll
+Test Assembly to run C:\src\devopenspace\binTest\ListBoxTest.dll
+Test Assembly to run C:\src\devopenspace\binTest\PopUpTest.dll
+Test Assembly to run C:\src\devopenspace\binTest\SampleWpfAppTest.dll
+Test Assembly to run C:\src\devopenspace\binTest\ScrollingTest.dll
+Test Assembly to run C:\src\devopenspace\binTest\SelectionStateTest.dll
+Test Assembly to run C:\src\devopenspace\binTest\SplitterTest.dll
+
+════════════════════════════════════════════════════════════════════
+Target                                          Status      Duration
+────────────────────────────────────────────────────────────────────
+IdentifyChangedDependenciesForTestAssemblies    Succeeded     < 1sec
+────────────────────────────────────────────────────────────────────
+Total                                                         < 1sec
+════════════════════════════════════════════════════════════════════
+```
+
 
 ---------------------------------------
 [🔙 Return to challenge](../challenge8.md)

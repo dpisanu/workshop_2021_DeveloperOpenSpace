@@ -133,7 +133,7 @@ class Build : NukeBuild
         {
             var dependencyHashStorage = new DependencyHashStorage(RootDirectory);
             var newHashes = new HashSet<string>();
-            var testAssemblies = new HashSet<Tuple<string, string>>();
+            var testsToRun = new HashSet<string>();
 
             // Load graph
             var dependencyGraph = DependencyGraphSpec.Load(DependencyGraphFilePath);
@@ -148,7 +148,9 @@ class Build : NukeBuild
                 if (!dependencyHashStorage.IsHashKnown(testHash))
                 {
                     // add new hash to list because it is not known
-                    testAssemblies.Add(new Tuple<string, string>(testFile, testHash));
+                    newHashes.Add(testHash);
+                    // add test assembly to run list
+                    testsToRun.Add(testFile);
                 }
                 // Determine dependencies for test assembly
                 var packageSpec = dependencyGraph.Projects.Single(p => p.GetBinPath() == testFile);
@@ -156,30 +158,21 @@ class Build : NukeBuild
                 // loop over all dependencies
                 foreach (var dependencyCSProjectPath in packageSpecDependencies)
                 {
-                    // get path to dependency
-                    foreach (var p in dependencyGraph.Projects)
-                    {
-                        Console.WriteLine($"-> {p.GetBinPath()}");
-                    }
                     var dependencyBinPath = dependencyGraph.Projects.Single(p => p.FilePath == dependencyCSProjectPath).GetBinPath();
-                    if (!dependencyBinPath.Contains(".dll"))
-                    {
-                        dependencyBinPath = dependencyBinPath.Replace("dll", ".dll");
-                    }
                     // generate hash
                     var hash = dependencyHashStorage.GenerateHash(dependencyBinPath);
                     if (!dependencyHashStorage.IsHashKnown(hash))
                     {
                         // add new hash to list because it is not known
                         newHashes.Add(hash);
-                        testAssemblies.Add(new Tuple<string, string>(testFile, testHash));
+                        // add test assembly to run list
+                        testsToRun.Add(testFile);
                     }
                 }
             }
             newHashes.ForEach(hash => dependencyHashStorage.StoreHash(hash));
-            testAssemblies.ForEach(hashTuple => dependencyHashStorage.StoreHash(hashTuple.Item2));
             Console.WriteLine($"Added {newHashes.Count} new dependency hashes");
-            Console.WriteLine($"testAssemblies {testAssemblies.Count} new test hashes");
+            testsToRun.ForEach(testAssembly => Console.WriteLine($"Test Assembly to run {testAssembly}"));
 
             dependencyHashStorage.Dispose();
         });

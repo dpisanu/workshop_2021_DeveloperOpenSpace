@@ -44,7 +44,7 @@ namespace DependencyAnalysis
             }
             else
             {
-                assemblyName = assemblyNameNode.Value + extension;
+                assemblyName = assemblyNameNode.Value + "." + extension;
             }
 
             return Path.GetFullPath(Path.Combine(directoryPath, doc.XPathSelectElements("//OutputPath")

@@ -13,6 +13,7 @@ using Nuke.Common.ProjectModel;
 using Nuke.Common.Tooling;
 using Nuke.Common.Tools.DotNet;
 using Nuke.Common.Tools.GitVersion;
+using Nuke.Common.Tools.VSTest;
 using Nuke.Common.Utilities.Collections;
 using static Nuke.Common.EnvironmentInfo;
 using static Nuke.Common.IO.FileSystemTasks;
@@ -175,5 +176,13 @@ class Build : NukeBuild
             testsToRun.ForEach(testAssembly => Console.WriteLine($"Test Assembly to run {testAssembly}"));
 
             dependencyHashStorage.Dispose();
+
+            ExecuteTests(testsToRun);
         });
+
+    private void ExecuteTests(IEnumerable<string> testAssemblies)
+    {
+        var settings = new VSTestSettings().AddTestAssemblies(testAssemblies);
+        VSTestTasks.VSTest(settings);
+    }
 }

@@ -9,10 +9,44 @@ To navigate around this fact we not only need to change the fingerprinting appro
 ### Fingerprinting
 
 The **byte-for-byte** comparison done by the hashing is error prone to slight variations on the source material.
-The great thing about .NET assemblies is that they are IL code and even if the assembly as a whole might show slight variations, the IL tree inside it can ALSO be put under a fingerprint.
+The great thing about .NET assemblies is that they are IL code and even if the assembly as a whole might show slight variations, the IL tree inside can ALSO be put under a fingerprint.
 
-# TODO :: ADD IL CODE FINGERPRINTING ::
+**Why is this important?**
 
+Think about the situation that you use different build machines, you are bound to receive binaries containing certain variable content such as:
+- contained checksum value
+- Time-Date stamps
+- Image base information
+
+For this, we can use the [IL Disassembler](https://docs.microsoft.com/en-us/dotnet/framework/tools/ildasm-exe-il-disassembler) to:
+- load the assembly
+- create a flat document style structure of the IL code
+- remove the variable sections which foil the fingerprinting
+- hash the sanitized structure **or** write the IL back to file and hash the file
+
+```csharp
+public string SanitizeAssemblyIL(string filePath)
+{
+    var ildasm = @"C:\Program Files\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\ildasm.exe";
+    
+    var processStartInf = new ProcessStartInfo(ildasm, $"/all /text {filePath}")
+    {
+        CreateNowWindow = true,
+        WindowStyle = ProcessWindowStyle.Hidden,
+        RedirectStandardOutput = true
+    }
+    using var process = Process.Start(processStartInf);
+    string document = process.StandardOutput.ReadToEnd();
+    proecess.WaitForExit();
+    
+    // Sanitize
+    document = Regex.Replace(document, "// Time-date stamo:.", string.Empty, RegexOptions.Compiled);
+    document = Regex.Replace(document, "// Image base:.", string.Empty, RegexOptions.Compiled);
+    document = Regex.Replace(document, "// Checksum:.", string.Empty, RegexOptions.Compiled);
+    
+    return document;
+}
+```
 
 ### Consistent builds
 

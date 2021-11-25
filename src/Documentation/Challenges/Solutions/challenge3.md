@@ -28,8 +28,10 @@ In some rare cases you might notice that during recompile on the same code base,
 This is due to slight variations of the assembly content caused by the [msbuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild?view=vs-2022) tooling, compile environment and gravitational anomalies. :)
 
 There are two solutions to this that can be used together.
-Optional : Change the way we create the fingerprint
-Must : Configure the [msbuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild?view=vs-2022) tooling to create consistent builds.
+
+_Optional_ : Change the way we create the fingerprint
+
+**Must** : Configure the [msbuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild?view=vs-2022) tooling to create consistent builds.
 
 ### Fingerprinting
 

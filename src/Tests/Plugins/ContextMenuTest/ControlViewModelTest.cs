@@ -13,6 +13,6 @@ namespace ContextMenuTest
         public void Ctor()
         {
             Assert.DoesNotThrow(() => new Plugins.ContextMenu.ControlViewModel());
-        }
+        }        
     }
 }

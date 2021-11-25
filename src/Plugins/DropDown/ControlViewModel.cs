@@ -36,7 +36,7 @@ namespace Plugins.DropDown
             set
             {
                 OnPropertChanged(ref _selectedItem, value);
-                TextBoxValue = _selectedItem;
+                TextBoxValue = SelectedItem;
             }
         }
     }

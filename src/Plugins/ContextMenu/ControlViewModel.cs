@@ -44,7 +44,6 @@ namespace Plugins.ContextMenu
         public ICommand ContextMenuNoCommand { get; set; }
         public ICommand ContextMenuCancelCommand { get; set; }
 
-
         private void ContextMenuOkCommandExecute(object parameter)
         {
             ContextMenuCommandExecute(_okImage);

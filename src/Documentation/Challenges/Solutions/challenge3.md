@@ -2,9 +2,34 @@
 
 ## Are builds consistent?
 
-You might have noticed that sometimes during recompile on the same code base, the hashes might vary.
-This is due to slight variations of the assembly content caused by the [msbuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild?view=vs-2022) tooling. 
-To navigate around this fact we not only need to change the fingerprinting approach but also force the [msbuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild?view=vs-2022) tooling to create consistent builds.
+To verify consistency we will need to build and fingerprint in a tight loop.
+
+```powershell
+$hashes = @()
+for ($counter = 1; $counter -le 10; $counter++ )
+{
+	dotnet clean 
+	dotnet build
+	# in case the build command fails, try again till success
+	while($LASTEXITCODE -ne 0)
+	{
+		dotnet build
+	}
+	$hash = Get-FileHash binTest\SampleWpfApp.exe | Select-Object -ExpandProperty Hash
+	$hashes = $hashes + $hash
+}
+
+foreach ($h in $hashes){
+   Write-Host -ForegroundColor Green $h
+}
+```
+
+In some rare cases you might notice that during recompile on the same code base, the hashes differ.
+This is due to slight variations of the assembly content caused by the [msbuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild?view=vs-2022) tooling, compile environment and gravitational anomalies. :)
+
+There are two solutions to this that can be used together.
+Optional : Change the way we create the fingerprint
+Must : Configure the [msbuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild?view=vs-2022) tooling to create consistent builds.
 
 ### Fingerprinting
 

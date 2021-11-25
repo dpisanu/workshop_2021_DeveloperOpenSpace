@@ -23,7 +23,7 @@ namespace Plugins.ClickDoubleClick
             FieldFourColor = _defaultColor;
 
             ButtonOneClick = new RelayCommand(ButtonOneClickExecute);
-            ButtonOneDoubleClock = new RelayCommand(ButtonOneDoubleClickExecute);
+            ButtonOneDoubleClick = new RelayCommand(ButtonOneDoubleClickExecute);
             ButtonTwoClick = new RelayCommand(ButtonTwoClickExecute);
             ButtonTwoDoubleClick = new RelayCommand(ButtonTwoDoubleClickExecute);
         }
@@ -50,7 +50,7 @@ namespace Plugins.ClickDoubleClick
         }
 
         public ICommand ButtonOneClick { get; set; }
-        public ICommand ButtonOneDoubleClock { get; set; }
+        public ICommand ButtonOneDoubleClick { get; set; }
         public ICommand ButtonTwoClick { get; set; }
         public ICommand ButtonTwoDoubleClick { get; set; }
 
